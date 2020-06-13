@@ -1,0 +1,102 @@
+/*
+* Font.
+*/
+$font-family-bold: 'Proxima Bold', Arial, sans-serif;
+$font-family-regular: 'Proxima Reg', Arial, sans-serif;
+
+$body-font-size: 14px;
+$body-font-family: $font-family-regular;
+
+/*
+* Screens.
+*/
+$screen-sx: 520px;
+$screen-sm: 768px;
+$screen-md: 980px;
+$screen-lg: 1220px;
+
+/*
+* Spaces.
+*/
+$space-base: 16px;
+$space-base-double: $space-base*2;
+$space-base-half: $space-base/2;
+$space-small: $space-base/4;
+
+/*
+* Controls (use for input || selector || buttons).
+*/
+$control-height: 40px;
+$control-radius: $control-height/2;
+$control-spaces: $space-small $space-base;
+
+/*
+* Animation.
+*/
+$transition-base: 270ms ease-in-out;
+
+/*
+* Buttons.
+*/
+$btn-height: $control-height - 10px;
+$btn-width: 150px;
+$btn-spaces: $control-spaces;
+$btn-radius: $btn-height / 2;
+$btn-font: $font-family-bold;
+$btn-icon-space: $space-small;
+
+// Toggle.
+$btn-toggle-size: 24px;
+$btn-toggle-radius: 50%;
+
+/*
+* Icons.
+*/
+$ico-size-base: 14px;
+$ico-size-large: 24px;
+
+/*
+* Search Input.
+*/
+$search-height: $control-height;
+$search-spaces: $control-spaces;
+$search-width: 300px;
+$search-icon-spaces--left: 0 $space-base-half 0 $space-base;
+
+/*
+* Dropdown.
+*/
+$dropdown-radius: 4px;
+$dropdown-width: 150px;
+$dropdown-height: $control-height;
+$dropdown-btn-spaces: $control-spaces;
+$dropdown-menu-item-spaces: $space-base-half $space-base;
+
+/*
+* Table.
+*/
+$table-col-spaces: $space-base;
+$table-col-width: 120px;
+$table-col-spaces-sm: $space-small;
+
+// Fix - If tbody has scroll.
+$table-head-space: 17px;
+
+/*
+* Toolbar.
+*/
+$toolbar-spaces: $space-base;
+$toolbar-head-width: 300px;
+$toolbar-head-border: 3px;
+
+/*
+* Pagination.
+*/
+$pagination-item-size: 24px;
+$pagination-item-radius: 50%;
+
+$pagination-item-border: 2px;
+$pagination-item-spaces: $space-small;
+
+$pagination-spread-size: 20px;
+$pagination-spread-spaces: 0 $space-base-half;

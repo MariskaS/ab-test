@@ -1,0 +1,8 @@
+@import "~src/styles/components/tabs";
+
+:host {
+
+  // To stretch the content.
+  display: flex;
+  flex: 1;
+}

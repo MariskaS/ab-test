@@ -1,0 +1,28 @@
+.ab-ico {
+  display: block;
+  color: currentColor;
+  font-size: $ico-size-base;
+
+  &__group {
+    margin: $space-small;
+    display: flex;
+
+    .ab-ico {
+      padding: $space-small;
+    }
+  }
+
+  /*
+  * Icons Size.
+  */
+  &--large {
+    font-size: $ico-size-large;
+  }
+
+  /*
+  * Icons Color.
+  */
+  &--primary {
+    color: var(--color-primary);
+  }
+}

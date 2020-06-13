@@ -1,0 +1,102 @@
+<div class="ab-table">
+  <div class="ab-table__body">
+    <div class="ab-table__head"
+         [class.is-empty]="!body.length">
+      <table>
+        <colgroup>
+          <col style="width: 40px">
+          <col style="width: 40px">
+          <col>
+          <col>
+          <col>
+          <col>
+          <col>
+          <col>
+          <col>
+          <col style="width: 40px">
+        </colgroup>
+        <thead>
+        <tr>
+          <th colspan="2">&nbsp;</th>
+          <th *ngFor="let th of columns;  let last = last"
+              [class.ab-border-0]="last">
+            <span *ngIf="!sort">{{th.title}}</span>
+            <div class="ab-sort"
+                 *ngIf="sort">
+              <span>{{th.title}}</span>
+              <div class="ab-sort__ico">
+                <i class="ab-ico--up">ico</i>
+                <i class="ab-ico--down">ico</i>
+              </div>
+            </div>
+          </th>
+          <th>&nbsp;</th>
+        </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="ab-table__content"
+         [class.is-empty]="!body.length">
+      <table *ngIf="body.length">
+        <colgroup>
+          <col style="width: 40px">
+          <col style="width: 40px">
+          <col>
+          <col>
+          <col>
+          <col>
+          <col>
+          <col>
+          <col>
+          <col style="width: 40px">
+        </colgroup>
+        <tbody>
+        <ng-container *ngFor="let data of body; let index = index">
+          <tr>
+            <td class="ab-ico-col">
+              <button class="ab-btn--toggle"
+                      type="button"
+                      [class.is-open]="collapsedState[index]"
+                      (click)="onToggle(index)">
+                <i class="ab-ico">ico</i>
+              </button>
+            </td>
+            <td class="ab-ico-col">check</td>
+            <td>{{data.status}}</td>
+            <td>{{data.description}}</td>
+            <td>{{data.check}}</td>
+            <td>{{data.returnData}}</td>
+            <td>{{data.tCode}}</td>
+            <td>${{data.amount}}</td>
+            <td>
+              <ng-container *ngIf="data.status !== 'Pending' && data.status !== 'Pending / Hold'; else positiveBalance">
+                <span class="ab-color--red">-${{data.amount}}</span>
+              </ng-container>
+              <ng-template #positiveBalance>${{data.amount}}</ng-template>
+            </td>
+            <td class="ab-ico-col">
+              <i class="ab-ico--large">ico</i>
+            </td>
+          </tr>
+          <tr *ngIf="collapsedState[index]">
+            <td colspan="10">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid distinctio eveniet fugit
+              hic laudantium minima, nobis odit optio possimus provident quam quas ratione rem sequi similique sunt,
+              tempora ullam vel!
+            </td>
+          </tr>
+        </ng-container>
+        </tbody>
+      </table>
+
+      <!--If Table is Empty-->
+      <p *ngIf="!body.length">No requests...</p>
+    </div>
+  </div>
+  <div class="ab-table__footer"
+       *ngIf="body.length">
+    <app-pagination>
+      <p><strong>2 Transactions Selected:</strong>&nbsp;$999,9999</p>
+    </app-pagination>
+  </div>
+</div>

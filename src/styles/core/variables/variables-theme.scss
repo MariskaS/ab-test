@@ -1,0 +1,82 @@
+:root {
+  --color-primary: #3864af;
+  --color-primary-dark: #0542a9;
+
+  --color-white: #fff;
+
+  --color-gray-light: #f2f2f2;
+  --color-gray: #dedede;
+  --color-gray-dark: #717171;
+  --color-gray-darker: #212121;
+
+  --color-red: #e03e52;
+
+  --body-color: var(--color-gray-darker);
+  --body-bg: var(--color-white);
+
+  /*
+  * Buttons.
+  */
+  // Primary.
+  --btn-primary-color: var(--color-white);
+  --btn-primary-border: var(--color-primary);
+  --btn-primary-bg: var(--color-primary);
+
+  --btn-primary-color--action: var(--color-white);
+  --btn-primary-border--action: var(--color-primary-dark);
+  --btn-primary-bg--action: var(--color-primary-dark);
+
+  // Secondary.
+  --btn-secondary-color: var(--color-primary);
+  --btn-secondary-border: var(--color-primary);
+  --btn-secondary-bg: var(--color-white);
+
+  --btn-secondary-color--action: var(--color-white);
+  --btn-secondary-border--action: var(--color-primary);
+  --btn-secondary-bg--action: var(--color-primary);
+
+  // Toggle.
+  --btn-toggle-bg: var(--color-gray);
+
+  /*
+  * Inputs.
+  */
+  --input-color: var(--body-color);
+  --input-border: var(--color-gray);
+  --input-bg: var(--color-gray-light);
+  --input-border--action: var(--color-primary);
+
+  /*
+  * Dropdown.
+  */
+  --dropdown-border: var(--color-gray);
+  --dropdown-bg: var(--color-white);
+  --dropdown-bg--action: var(--color-gray-light);
+
+  /*
+  * Table.
+  */
+  --table-bg-head: var(--color-gray-light);
+  --table-border: var(--color-gray);
+  --table-bg-zebra: var(--color-gray-light);
+
+  /*
+  * Toolbar.
+  */
+  --toolbar-head-bg: var(--color-gray-light);
+  --toolbar-head-border: var(--color-gray);
+  --toolbar-head-border--active: var(--color-primary);
+  --toolbar-border: var(--color-gray);
+
+  /*
+  * Pagination.
+  */
+  --pagination-item-color: var(--color-primary);
+
+  --pagination-item-bg--active: var(--color-gray);
+  --pagination-item-color--active: var(--body-color);
+
+  --pagination-item-color--disabled: var(--color-gray-dark);
+
+  --pagination-spread: var(--color-gray-dark);
+}
