@@ -1,0 +1,23 @@
+<div class="ab-dropdown">
+  <button class="ab-dropdown__btn"
+          aria-haspopup="listbox"
+          aria-labelledby="elem exp_button"
+          id="exp_button"
+          (click)="toggle()"
+          type="button">
+    <i class="ab-ico ab-ico--primary">ico</i>
+    <span>{{dropdownTitle}}</span>
+    <i class="ab-ico"
+       [class.is-open]="isOpen">ico</i>
+  </button>
+  <ul class="ab-dropdown__menu"
+      id="elem_list"
+      tabindex="-1"
+      role="listbox"
+      aria-labelledby="elem"
+      *ngIf="isOpen">
+    <li class="ab-dropdown__menu__item"
+        role="option"
+        *ngFor="let item of list">{{item.title}}</li>
+  </ul>
+</div>

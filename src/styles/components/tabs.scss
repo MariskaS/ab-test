@@ -1,0 +1,72 @@
+@import "~src/styles/core/variables/variables";
+@import "~src/styles/core/mixins/mixin-flex-variant";
+@import "~src/styles/core/mixins/mixin-toolbar-variant";
+
+.ab-tab {
+  &__head {
+    &__item {
+      background-color: var(--toolbar-head-bg);
+      padding: $toolbar-spaces;
+      cursor: pointer;
+      border-left: $toolbar-head-border solid var(--toolbar-head-border);
+      transition: border-color $transition-base;
+      text-transform: capitalize;
+
+      &:active,
+      &:focus,
+      &:hover {
+        border-color: var(--toolbar-head-border--active);
+      }
+    }
+
+    .is-active {
+      border-color: var(--toolbar-head-border--active);
+      font-family: $font-family-bold;
+    }
+
+    // For Desktop & Tablet.
+    @media (min-width: $screen-sx) {
+      display: flex;
+
+      &__item {
+        max-width: $toolbar-head-width;
+        border-left: unset;
+        border-top: $toolbar-head-border solid var(--toolbar-head-border);
+      }
+    }
+  }
+
+  &__body {
+    overflow-x: auto;
+
+    // TODO: To stretch the content.
+    // For Desktop & Tablet.
+    @media (min-width: $screen-sx) {
+      display: flex;
+      flex: 1;
+    }
+  }
+
+  &__toolbar {
+    @include toolbar-variant(flex-start);
+    background-color: var(--toolbar-head-bg);
+    padding: $toolbar-spaces;
+  }
+
+  &__filter {
+    @include toolbar-variant;
+    padding: $space-base 0;
+    border-top: 1px solid var(--toolbar-border);
+  }
+
+  &__wrapper {
+
+    // TODO: To stretch the content.
+    // For Desktop & Tablet.
+    @media (min-width: $screen-sx) {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+  }
+}

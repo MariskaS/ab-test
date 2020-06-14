@@ -1,0 +1,50 @@
+@import "~src/styles/core/variables/variables";
+@import "~src/styles/core/mixins/mixin-flex-variant";
+
+@mixin btn-variant($color, $border, $background, $color-action, $border-action, $background-action) {
+  min-height: $btn-height;
+  width: 100%;
+  overflow: hidden;
+  padding: $btn-spaces;
+  font-family: $btn-font;
+  font-size: $body-font-size;
+  border-radius: $btn-radius;
+  color: $color;
+  border: 1px solid $border;
+  background-color: $background;
+  cursor: pointer;
+  text-transform: capitalize;
+  white-space: nowrap;
+  user-select: none;
+  @include flex-variant(inline-flex, center, center);
+  transition: color $transition-base, background $transition-base;
+
+  &:active,
+  &:hover {
+    &:enabled {
+      color: $color-action;
+      border-color: $border-action;
+      background-color: $background-action;
+    }
+  }
+
+  &:disabled {
+    opacity: .6;
+    cursor: default;
+  }
+
+  span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  // If Button has Icon.
+  .ab-ico {
+    margin-right: $btn-icon-space;
+  }
+
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sx) {
+    min-width: $btn-width;
+  }
+}

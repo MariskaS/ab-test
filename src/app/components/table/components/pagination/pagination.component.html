@@ -1,0 +1,73 @@
+<div class="ab-pagination">
+  <div class="ab-pagination__size">
+    <p>Viewing&nbsp;<strong>{{from}}–{{to}}</strong>&nbsp;of&nbsp;<strong>{{totalItems}}</strong></p>
+    <button app-button
+            iconName="ico"
+            type="button">
+      Load more
+    </button>
+  </div>
+  <nav class="ab-pagination__nav"
+       role="navigation"
+       aria-label="Table Pagination">
+    <a class="ab-pagination__item is-disable"
+       href="#"
+       aria-label="Previous set of pages"
+       aria-disabled="true">
+      <i class="ab-ico">ico</i>
+    </a>
+
+    <a class="ab-pagination__item is-disable"
+       href="#"
+       aria-label="Previous page"
+       aria-disabled="true">
+      <i class="ab-ico">ico</i>
+    </a>
+
+    <a class="ab-pagination__item is-active"
+       href="#"
+       aria-current="page">
+      <span aria-label="Page 1">1</span>
+    </a>
+    <a class="ab-pagination__item"
+       href="#">
+      <span aria-label="Page 2">2</span>
+    </a>
+    <a class="ab-pagination__item"
+       href="#">
+      <span aria-label="Page 3">3</span>
+    </a>
+    <span class="ab-pagination__spread">...</span>
+    <a class="ab-pagination__item"
+       href="#">
+      <span aria-label="Page 22">22</span>
+    </a>
+    <a class="ab-pagination__item"
+       href="#">
+      <span aria-label="Page 23">23</span>
+    </a>
+    <a class="ab-pagination__item"
+       href="#">
+      <span aria-label="Page 24">24</span>
+    </a>
+    <a class="ab-pagination__item"
+       href="#">
+      <span aria-label="Page 3">3</span>
+    </a>
+
+    <a class="ab-pagination__item"
+       href="#"
+       aria-label="Next page">
+      <i class="ab-ico">ico</i>
+    </a>
+
+    <a class="ab-pagination__item"
+       href="#"
+       aria-label="Next set of pages"
+       aria-disabled="true">
+      <i class="ab-ico">ico</i>
+    </a>
+  </nav>
+  <ng-content></ng-content>
+</div>
+

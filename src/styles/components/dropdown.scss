@@ -1,0 +1,57 @@
+@import "../core/variables/variables";
+@import "../core/mixins/mixin-flex-variant";
+
+.ab-dropdown {
+  position: relative;
+
+  &__btn {
+    height: $dropdown-height;
+    width: 100%;
+    padding: $dropdown-btn-spaces;
+    border-radius: $dropdown-radius;
+    font-size: $body-font-size;
+    cursor: pointer;
+    border: 1px solid var(--dropdown-border);
+    @include flex-variant(inline-flex, center, center);
+
+    span {
+      flex: 1;
+      padding: 0 $space-base-half;
+      text-align: left;
+    }
+
+    .is-open {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    margin-top: -1px;
+    border: 1px solid var(--dropdown-border);
+    background-color: var(--dropdown-bg);
+
+    &__item {
+      padding: $dropdown-menu-item-spaces;
+      cursor: pointer;
+      text-align: left;
+
+      &:not(:first-child) {
+        border-top: 1px solid var(--dropdown-border);
+      }
+
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: var(--dropdown-bg--action);
+      }
+    }
+  }
+
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sx) {
+    width: $dropdown-width;
+  }
+}

@@ -1,0 +1,16 @@
+@import "~src/styles/components/table";
+@import "~src/styles/components/buttons/btn-toggle";
+@import "../../../styles/core/mixins/mixin-toolbar-variant";
+
+:host {
+
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sx) {
+    display: flex;
+    flex: 1;
+  }
+}
+
+.ab-color--red {
+  color: red;
+}
