@@ -5,9 +5,12 @@
 .ab-table {
 
   // Stretch container full screen.
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sx) {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
 
   table {
     table-layout: fixed;
@@ -31,10 +34,13 @@
   &__body {
 
     // Stretch container full screen.
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    overflow-x: auto;
+    // For Desktop & Tablet.
+    @media (min-width: $screen-sx) {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      overflow-x: auto;
+    }
   }
 
   &__head {

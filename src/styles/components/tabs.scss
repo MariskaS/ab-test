@@ -45,8 +45,11 @@
     @include focus-variant;
 
     // Stretch container full screen.
-    display: flex;
-    flex: 1;
+    // For Desktop & Tablet.
+    @media (min-width: $screen-sx) {
+      display: flex;
+      flex: 1;
+    }
   }
 
   &__toolbar {
@@ -64,8 +67,11 @@
   &__wrapper {
 
     // Stretch container full screen.
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+    // For Desktop & Tablet.
+    @media (min-width: $screen-sx) {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
   }
 }

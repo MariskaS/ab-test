@@ -11,9 +11,11 @@ $body-font-family: $font-family-regular;
 * Screens.
 */
 $screen-sx: 520px;
-$screen-sm: 768px;
-$screen-md: 980px;
-$screen-lg: 1220px;
+
+/*
+* Z-index.
+*/
+$z-index-dropdown: 2;
 
 /*
 * Spaces.
@@ -75,7 +77,7 @@ $dropdown-radius: 4px;
 $dropdown-width: 150px;
 $dropdown-height: $control-height;
 $dropdown-btn-spaces: $control-spaces;
-$dropdown-menu-item-spaces: $space-base-half $space-base;
+$dropdown-menu-item-spaces: $space-base;
 
 /*
 * Table.
