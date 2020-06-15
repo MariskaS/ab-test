@@ -18,7 +18,7 @@ Color Theme and that there is no need to import them into components.
 1. Project Documentation  
 
 ### Total time spent
-**~12h** for creating components with HTML/Scss + several hours for trying to install Angular2.
+**~14h** for creating components with HTML/Scss + several hours for trying to install Angular2.
 
 ### Why is Angular 8 used instead of Angular 2?
 Angular 8 was the fastest option.
@@ -36,4 +36,8 @@ for example, in dropdowns - Application need's an additional functionality
 using [@angular/cdk](https://github.com/angular/components#readme) 
 ([dropdown example](https://stackblitz.com/edit/angular-custom-dropdown-cdk?file=src%2Fapp%2Fcustom-dropdown%2Fcustom-select.html).
 I didn't have enough time allocated for the Technical screening.
+
+### Icons 
+Currently, instead of icons, stubs are used.  
+It would be necessary to add SVG sprite, for which I did not have enough time
 
