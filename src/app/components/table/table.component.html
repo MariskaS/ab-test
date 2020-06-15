@@ -1,4 +1,6 @@
-<div class="ab-table">
+<div class="ab-table"
+     role="table"
+     aria-label="Account Transactions Table">
   <div class="ab-table__body">
     <div class="ab-table__head"
          [class.is-empty]="!body.length">
@@ -17,7 +19,13 @@
         </colgroup>
         <thead>
         <tr>
-          <th colspan="2">&nbsp;</th>
+          <th>&nbsp;</th>
+          <th class="ab-ico-col">
+            <div class="ab-checkbox">
+              <input type="checkbox"
+                     aria-label="Select All"/>
+            </div>
+          </th>
           <th *ngFor="let th of columns;  let last = last"
               [class.ab-border-0]="last">
             <span *ngIf="!sort">{{th.title}}</span>
@@ -61,7 +69,12 @@
                 <i class="ab-ico">ico</i>
               </button>
             </td>
-            <td class="ab-ico-col">check</td>
+            <td class="ab-ico-col">
+              <div class="ab-checkbox">
+                <input type="checkbox"
+                       aria-label="Select table row"/>
+              </div>
+            </td>
             <td>{{data.status}}</td>
             <td>{{data.description}}</td>
             <td>{{data.check}}</td>

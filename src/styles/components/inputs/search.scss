@@ -15,10 +15,6 @@
   border-radius: $control-radius;
 
   .ab-ico {
-    padding: $search-icon-spaces--left;
-
-    + input {
-      padding-left: 0;
-    }
+    padding-left: $search-icon-spaces;
   }
 }

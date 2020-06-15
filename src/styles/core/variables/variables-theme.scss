@@ -47,6 +47,13 @@
   --input-border--action: var(--color-primary);
 
   /*
+  * CheckBox.
+  */
+  --checkbox-border: var(--color-gray);
+  --checkbox-bg: var(--color-white);
+  --checkbox-checked-icon: var(--color-primary);
+
+  /*
   * Dropdown.
   */
   --dropdown-border: var(--color-gray);
@@ -79,4 +86,9 @@
   --pagination-item-color--disabled: var(--color-gray-dark);
 
   --pagination-spread: var(--color-gray-dark);
+
+  /*
+  * Custom Focus.
+  */
+  --focus-box-shadow: var(--color-primary-dark);
 }
