@@ -45,14 +45,15 @@
   }
 
   &__toolbar {
-    padding: $table-toolbar-space;
+    padding: $table-toolbar-spaces;
+    border-top: 1px solid var(--color-gray);
   }
 
   &__head {
     background-color: var(--table-bg-head);
 
     th:not(:first-child):not(:last-child):not(.ab-border-0) {
-      border-right: 2px solid var(--table-border);
+      border-right: 1px solid var(--table-border);
     }
 
     // Fix - If tbody has scroll.
@@ -81,7 +82,7 @@
   }
 
   &__footer {
-    border: 2px solid var(--table-border);
+    border: 1px solid var(--table-border);
     border-left-width: 0;
     border-right-width: 0;
     padding: $space-base-half $space-base;

@@ -1,12 +1,4 @@
 <div class="ab-pagination">
-  <div class="ab-pagination__size">
-    <p>Viewing&nbsp;<strong>{{from}}–{{to}}</strong>&nbsp;of&nbsp;<strong>{{totalItems}}</strong></p>
-    <button app-button
-            iconName="ico"
-            type="button">
-      Load more
-    </button>
-  </div>
   <nav class="ab-pagination__nav"
        role="navigation"
        aria-label="Table Pagination">
@@ -68,6 +60,13 @@
       <i class="ab-ico">ico</i>
     </a>
   </nav>
-  <ng-content></ng-content>
+  <div class="ab-pagination__size">
+    <p>Viewing&nbsp;<strong>{{from}}–{{to}}</strong>&nbsp;of&nbsp;<strong>{{totalPages}}</strong></p>
+    <button app-button
+            iconName="ico"
+            type="button">
+      Load more
+    </button>
+  </div>
 </div>
 

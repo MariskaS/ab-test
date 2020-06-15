@@ -25,23 +25,13 @@
     height: $pagination-item-size;
     min-width: $pagination-item-size;
     margin: $pagination-item-spaces;
-    border-radius: $pagination-item-radius;
-    font-family: $font-family-bold;
     text-decoration: none;
-    color: var(--pagination-item-color);
     @include flex-variant(flex, center, center);
     @include focus-variant;
 
-    span, .ab-ico {
-      border-bottom: $pagination-item-border solid transparent;
-    }
-
     &:not(.is-active):not(.is-disable) {
-      &:hover,
-      &:focus {
-        span, .ab-ico {
-          border-bottom-color: currentColor;
-        }
+      &:hover {
+         background-color: var(--pagination-item-bg--acton);
       }
     }
 
@@ -51,7 +41,7 @@
     }
 
     &.is-disable {
-      color: var(--pagination-item-color--disabled);
+      opacity: .8;
       cursor: default;
       pointer-events: none;
     }

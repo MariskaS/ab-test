@@ -29,7 +29,6 @@ $space-small: $space-base/4;
 * Controls (use for input || selector || buttons).
 */
 $control-height: 40px;
-$control-radius: $control-height/2;
 $control-spaces: $space-small $space-base;
 
 /*
@@ -43,7 +42,6 @@ $transition-base: 270ms ease-in-out;
 $btn-height: $control-height - 10px;
 $btn-width: 150px;
 $btn-spaces: $control-spaces;
-$btn-radius: $btn-height / 2;
 $btn-font: $font-family-bold;
 $btn-icon-space: $space-small;
 
@@ -73,7 +71,6 @@ $checkbox-size: 24px;
 /*
 * Dropdown.
 */
-$dropdown-radius: 4px;
 $dropdown-width: 150px;
 $dropdown-height: $control-height;
 $dropdown-btn-spaces: $control-spaces;
@@ -85,7 +82,7 @@ $dropdown-menu-item-spaces: $space-base;
 $table-col-spaces: $space-base;
 $table-col-width: 120px;
 $table-col-spaces-sm: $space-small;
-$table-toolbar-space: $space-base;
+$table-toolbar-spaces: $space-base $space-small;
 
 // Fix - If tbody has scroll.
 $table-head-space: 17px;
@@ -101,7 +98,6 @@ $toolbar-head-border: 3px;
 * Pagination.
 */
 $pagination-item-size: 24px;
-$pagination-item-radius: 50%;
 
 $pagination-item-border: 2px;
 $pagination-item-spaces: $space-small;

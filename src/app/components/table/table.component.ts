@@ -15,7 +15,8 @@ export class TableComponent implements OnInit {
   sort: boolean = true;
   collapsedState: boolean[] = [];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
     this.collapsedState = this.columnsList.map(() => false);
@@ -23,7 +24,7 @@ export class TableComponent implements OnInit {
 
   /**
    * Toggle collapse row with description.
-   * @param index number of table row.
+   * @param index {number} of table row.
    */
   onToggle(index) {
     this.collapsedState[index] = !this.collapsedState[index];
