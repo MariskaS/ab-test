@@ -1,4 +1,5 @@
 @import "~src/styles/core/variables/variables";
+@import "~src/styles/core/mixins/mixin-focus-variant";
 
 @mixin input-variant(
   $height,
@@ -24,6 +25,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: $body-font-size;
+
+
+    @include focus-variant;
   }
 
   &:active,
