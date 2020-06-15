@@ -8,9 +8,11 @@
       background-color: var(--toolbar-head-bg);
       padding: $toolbar-spaces;
       cursor: pointer;
+      border: 0;
       border-left: $toolbar-head-border solid var(--toolbar-head-border);
       transition: border-color $transition-base;
       text-transform: capitalize;
+      display: block;
 
       &:active,
       &:focus,
@@ -37,14 +39,12 @@
   }
 
   &__body {
-    overflow-x: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 
-    // TODO: To stretch the content.
-    // For Desktop & Tablet.
-    @media (min-width: $screen-sx) {
-      display: flex;
-      flex: 1;
-    }
+    // Stretch container full screen.
+    display: flex;
+    flex: 1;
   }
 
   &__toolbar {
@@ -61,12 +61,9 @@
 
   &__wrapper {
 
-    // TODO: To stretch the content.
-    // For Desktop & Tablet.
-    @media (min-width: $screen-sx) {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
+    // Stretch container full screen.
+    display: flex;
+    flex-direction: column;
+    flex: 1;
   }
 }

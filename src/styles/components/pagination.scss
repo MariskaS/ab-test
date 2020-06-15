@@ -13,6 +13,11 @@
 
   &__nav {
     @include flex-variant(flex, center, center);
+
+    // For Tablet.
+    @media (max-width: $screen-sx) {
+      padding: $space-base-half 0;
+    }
   }
 
   &__item {
@@ -59,6 +64,7 @@
   // For Desktop & Tablet.
   @media (min-width: $screen-sx) {
     @include flex-variant(flex, space-between, center);
+    flex-wrap: wrap;
   }
 }
 

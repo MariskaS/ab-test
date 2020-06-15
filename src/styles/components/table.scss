@@ -3,8 +3,11 @@
 @import "~src/styles/core/mixins/mixin-toolbar-variant";
 
 .ab-table {
+
+  // Stretch container full screen.
   display: flex;
   flex-direction: column;
+  flex: 1;
 
   table {
     table-layout: fixed;
@@ -25,17 +28,16 @@
     }
   }
 
-  // TODO: fix scroll
   &__body {
+
+    // Stretch container full screen.
     display: flex;
-    flex: 1;
-    overflow: hidden;
-    overflow-x: auto;
     flex-direction: column;
+    flex: 1;
+    overflow-x: auto;
   }
 
   &__head {
-    overflow: hidden;
     background-color: var(--table-bg-head);
 
     th:not(:first-child):not(:last-child):not(.ab-border-0) {
@@ -55,8 +57,6 @@
 
   &__content {
     overflow-y: auto;
-    overflow-x: hidden;
-    flex: 1;
 
     tr:nth-of-type(even) {
       background-color: var(--table-bg-zebra);
@@ -66,12 +66,6 @@
     &.is-empty {
       padding: $space-base-double $space-base;
       font-family: $font-family-bold;
-
-      // For Desktop & Tablet.
-      @media (min-width: $screen-sx) {
-        @include flex-variant(flex, center, center);
-        flex: 1;
-      }
     }
   }
 

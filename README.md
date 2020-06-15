@@ -1,27 +1,39 @@
-# AbTest
+# Technical screening
+Task - Implement the interface using HTML/CSS and Angular 2 project.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
+# Description  
+**[Live Demo](http://mariskas.github.io/)** - here is a build version of the test task. 
 
-## Development server
+**Technologies:** Angular 8, HTML/Scss, Typescript, HTML/Scss, JavaScript.  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+**Tools:** Webstorm, Git, GitHub.
 
-## Code scaffolding
+# Comments
+### Within the given time to complete the task, I did:
+1. Reusable components such as Buttons and Dropdown (in the future it is possible to make reusable components - Tabs and Table)
+1. HTML and Scss for components
+1. Responsive for all components except the `table`.  
+1. Variable system(Css/Scss) - The color variables are made in **CSS** for the ability to quickly change the 
+Color Theme and that there is no need to import them into components.
+1. Project Documentation  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Total time spent
+**~12h** for creating components with HTML/Scss + several hours for trying to install Angular2.
 
-## Build
+### Why is Angular 8 used instead of Angular 2?
+Angular 8 was the fastest option.
+Since the created components do not contain logic specific only to Angular8, these components can be easily transferred to the application on Angular2.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Since Angular 2 is old and not supported anymore by Angular developers, I could not install it quickly using the CLI.
 
-## Running unit tests
+A possible solution could be a Docker Image, 
+or a solution like this [angular2-seed](https://github.com/matthias-schuetz/angular2-seed). 
+But as part of this test assignment, I did not have time for this.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Keyboard Accessibility  
+Aria label and roles added. But for the full implementation of ADA, 
+for example, in dropdowns - Application need's an additional functionality 
+using [@angular/cdk](https://github.com/angular/components#readme) 
+([dropdown example](https://stackblitz.com/edit/angular-custom-dropdown-cdk?file=src%2Fapp%2Fcustom-dropdown%2Fcustom-select.html).
+I didn't have enough time allocated for the Technical screening.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

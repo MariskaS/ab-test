@@ -6,27 +6,17 @@ body {
   color: var(--body-color);
   line-height: 1.1;
   background-color: var(--body-bg);
-  overflow-x: hidden;
-  overflow-y: auto;
 
-  // TODO: To stretch the content.
-  // For Desktop & Tablet.
-  @media (min-width: $screen-sx) {
-    display: flex;
-    flex: 1;
-  }
+  // Stretch container full screen.
+  display: flex;
 }
 
 .ab-main {
   padding: $space-base;
 
-  // TODO: To stretch the content.
-  // For Desktop & Tablet.
-  @media (min-width: $screen-sx) {
-    display: flex;
-    flex: 1;
-  }
-
+  // Stretch container full screen.
+  display: flex;
+  flex: 1;
 }
 
 strong {
