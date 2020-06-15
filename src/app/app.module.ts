@@ -7,6 +7,7 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { SearchComponent } from './components/search/search.component';
 import { TableComponent } from './components/table/table.component';
 import { PaginationComponent } from './components/table/components/pagination/pagination.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PaginationComponent } from './components/table/components/pagination/pa
     PaginationComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
