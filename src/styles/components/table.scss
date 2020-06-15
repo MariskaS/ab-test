@@ -27,6 +27,7 @@
 
       &.ab-ico-col {
         padding: $table-col-spaces-sm;
+        text-align: center;
       }
     }
   }
@@ -41,6 +42,10 @@
       flex: 1;
       overflow-x: auto;
     }
+  }
+
+  &__toolbar {
+    padding: $table-toolbar-space;
   }
 
   &__head {
