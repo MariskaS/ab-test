@@ -9,15 +9,25 @@ body {
   background-color: var(--body-bg);
 
   // Stretch container full screen.
-  display: flex;
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sx) {
+    display: flex;
+  }
 }
 
 .ab-main {
   padding: $space-base;
 
   // Stretch container full screen.
-  display: flex;
-  flex: 1;
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sx) {
+    display: flex;
+    flex: 1;
+
+    // TODO: only for DEMO.
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 strong {

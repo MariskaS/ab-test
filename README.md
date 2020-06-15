@@ -34,7 +34,7 @@ But as part of this test assignment, I did not have time for this.
 Aria label and roles added. But for the full implementation of ADA, 
 for example, in dropdowns - Application need's an additional functionality 
 using [@angular/cdk](https://github.com/angular/components#readme) 
-([dropdown example](https://stackblitz.com/edit/angular-custom-dropdown-cdk?file=src%2Fapp%2Fcustom-dropdown%2Fcustom-select.html).
+([dropdown example](https://stackblitz.com/edit/angular-custom-dropdown-cdk?file=src%2Fapp%2Fcustom-dropdown%2Fcustom-select.html)).
 I didn't have enough time allocated for the Technical screening.
 
 ### Icons 

@@ -34,6 +34,8 @@
     margin-top: -1px;
     border: 1px solid var(--dropdown-border);
     background-color: var(--dropdown-bg);
+    z-index: $z-index-dropdown;
+    @include focus-variant;
 
     &__item {
       padding: $dropdown-menu-item-spaces;

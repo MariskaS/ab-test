@@ -3,6 +3,9 @@
 :host {
 
   // Stretch container full screen.
-  display: flex;
-  flex: 1;
+  // For Desktop & Tablet.
+  @media (min-width: $screen-sx) {
+    display: flex;
+    flex: 1;
+  }
 }
