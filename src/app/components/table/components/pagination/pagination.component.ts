@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
   styleUrls: ['./pagination.component.scss']
 })
 export class PaginationComponent {
-  totalItems: number = 150;
+  totalPages: number = 150;
 
   from: number = 1;
   to: number = 50;

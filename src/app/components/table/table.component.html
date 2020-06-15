@@ -3,7 +3,9 @@
      aria-label="Account Transactions Table">
   <div class="ab-table__body">
     <div class="ab-table__toolbar">
-      <p><strong>{{countSelected}}</strong>&nbsp;items selected</p>
+      <p>
+        Selected Items:&nbsp;<strong>{{countSelected}}</strong>
+      </p>
     </div>
     <div class="ab-table__head"
          [class.is-empty]="!bodyList.length">
@@ -115,8 +117,6 @@
   </div>
   <div class="ab-table__footer"
        *ngIf="bodyList.length">
-    <app-pagination>
-      <p><strong>2 Transactions Selected:</strong>&nbsp;$999,9999</p>
-    </app-pagination>
+    <app-pagination></app-pagination>
   </div>
 </div>

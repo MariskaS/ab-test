@@ -78,12 +78,10 @@
   /*
   * Pagination.
   */
-  --pagination-item-color: var(--color-primary);
+  --pagination-item-bg--acton: var(--color-gray-light);
 
-  --pagination-item-bg--active: var(--color-gray);
-  --pagination-item-color--active: var(--body-color);
-
-  --pagination-item-color--disabled: var(--color-gray-dark);
+  --pagination-item-bg--active: var(--color-primary);
+  --pagination-item-color--active: var(--color-white);
 
   --pagination-spread: var(--color-gray-dark);
 
