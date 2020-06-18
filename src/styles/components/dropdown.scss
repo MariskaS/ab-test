@@ -20,9 +20,13 @@
       padding: 0 $space-base-half;
       text-align: left;
     }
+  }
 
-    .is-open {
-      transform: rotate(-180deg);
+  &__ico {
+    transform: rotate(90deg);
+
+    &.is-open {
+      transform: rotate(-90deg);
     }
   }
 

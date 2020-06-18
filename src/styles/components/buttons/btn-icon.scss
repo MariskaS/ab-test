@@ -1,0 +1,7 @@
+@import "mixin-btn-icon-variant";
+
+:host.ab-btn--icon {
+  background-color: transparent;
+  padding: 0;
+  @include btn-icon-variant;
+}

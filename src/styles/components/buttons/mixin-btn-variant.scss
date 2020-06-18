@@ -40,7 +40,8 @@
   }
 
   // If Button has Icon.
-  .ab-ico {
+  .ab-btn__ico {
+    margin-left: -$btn-icon-space;
     margin-right: $btn-icon-space;
   }
 

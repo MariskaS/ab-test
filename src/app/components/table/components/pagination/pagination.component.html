@@ -2,19 +2,20 @@
   <nav class="ab-pagination__nav"
        role="navigation"
        aria-label="Table Pagination">
-    <a class="ab-pagination__item is-disable"
-       href="#"
-       aria-label="Previous set of pages"
-       aria-disabled="true">
-      <i class="ab-ico">ico</i>
-    </a>
 
-    <a class="ab-pagination__item is-disable"
-       href="#"
-       aria-label="Previous page"
-       aria-disabled="true">
-      <i class="ab-ico">ico</i>
-    </a>
+    <button app-button
+            class="ab-ico--left"
+            theme="buttonIcon"
+            ariaLabel="Previous set of pages"
+            iconName="double_arrow_right"
+            disabled></button>
+
+    <button app-button
+            class="ab-ico--left"
+            theme="buttonIcon"
+            ariaLabel="Previous page"
+            iconName="arrow_right"
+            disabled></button>
 
     <a class="ab-pagination__item is-active"
        href="#"
@@ -47,24 +48,22 @@
       <span aria-label="Page 3">3</span>
     </a>
 
-    <a class="ab-pagination__item"
-       href="#"
-       aria-label="Next page">
-      <i class="ab-ico">ico</i>
-    </a>
 
-    <a class="ab-pagination__item"
-       href="#"
-       aria-label="Next set of pages"
-       aria-disabled="true">
-      <i class="ab-ico">ico</i>
-    </a>
+    <button app-button
+            theme="buttonIcon"
+            ariaLabel="Next page"
+            iconName="arrow_right"></button>
+
+    <button app-button
+            theme="buttonIcon"
+            ariaLabel="Next set of pages"
+            iconName="double_arrow_right"></button>
   </nav>
   <div class="ab-pagination__size">
     <p>Viewing&nbsp;<strong>{{from}}–{{to}}</strong>&nbsp;of&nbsp;<strong>{{totalPages}}</strong></p>
     <button app-button
-            iconName="ico"
-            type="button">
+            ariaLabel="To load more data into a table"
+            iconName="load">
       Load more
     </button>
   </div>

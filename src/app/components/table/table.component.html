@@ -20,7 +20,6 @@
           <col>
           <col>
           <col>
-          <col style="width: 40px">
         </colgroup>
         <thead>
         <tr>
@@ -35,17 +34,9 @@
           </th>
           <th *ngFor="let th of columnsList;  let last = last"
               [class.ab-border-0]="last">
-            <span *ngIf="!sort">{{th.title}}</span>
-            <div class="ab-sort"
-                 *ngIf="sort">
-              <span>{{th.title}}</span>
-              <div class="ab-sort__ico">
-                <i class="ab-ico--up">ico</i>
-                <i class="ab-ico--down">ico</i>
-              </div>
-            </div>
+            <span *ngIf="th.notSort">{{th.title}}</span>
+            <app-sort *ngIf="!th.notSort" name="{{th.title}}"></app-sort>
           </th>
-          <th>&nbsp;</th>
         </tr>
         </thead>
       </table>
@@ -63,7 +54,6 @@
           <col>
           <col>
           <col>
-          <col style="width: 40px">
         </colgroup>
         <tbody>
         <ng-container *ngFor="let data of bodyList; let index = index">
@@ -71,9 +61,12 @@
             <td class="ab-ico-col">
               <button class="ab-btn--toggle"
                       type="button"
+                      aria-label="Toggle row"
                       [class.is-open]="collapsedState[index]"
                       (click)="onToggle(index)">
-                <i class="ab-ico">ico</i>
+                <svg-icon class="ab-ico"
+                          aria-hidden="true"
+                          src="assets/icons/arrow_right.svg"></svg-icon>
               </button>
             </td>
             <td class="ab-ico-col">
@@ -96,12 +89,9 @@
               </ng-container>
               <ng-template #positiveBalance>${{data.amount}}</ng-template>
             </td>
-            <td class="ab-ico-col">
-              <i class="ab-ico--large">ico</i>
-            </td>
           </tr>
           <tr *ngIf="collapsedState[index]">
-            <td colspan="10">
+            <td colspan="9">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid distinctio eveniet fugit
               hic laudantium minima, nobis odit optio possimus provident quam quas ratione rem sequi similique sunt,
               tempora ullam vel!
