@@ -11,12 +11,10 @@ Task - Implement the interface using HTML/CSS and Angular.
 **Additional packages:** [angular-svg-icon](https://github.com/czeckd/angular-svg-icon)
 
 ## Comments
-### Within the given time to complete the task, I did:
 1. Reusable components such as Buttons and Dropdown.
 1. Responsive for all components except the `table` .  
 1. Variable system(Css/Scss) - The color variables are made in **CSS** for the ability to quickly change the 
 Color Theme and that there is no need to import them into components.
-1. Project Documentation  
 
 ### Keyboard Accessibility  
 Aria label and roles added. But for the full implementation of ADA, 
