@@ -12,7 +12,6 @@ export class TableComponent implements OnInit {
   checkedAll: boolean = false;
   countSelected = 0;
 
-  sort: boolean = true;
   collapsedState: boolean[] = [];
 
   constructor() {

@@ -5,10 +5,11 @@
           id="exp_button"
           (click)="toggle()"
           type="button">
-    <i class="ab-ico ab-ico--primary">ico</i>
     <span>{{dropdownTitle}}</span>
-    <i class="ab-ico"
-       [class.is-open]="isOpen">ico</i>
+    <svg-icon class="ab-dropdown__ico"
+              [class.is-open]="isOpen"
+              aria-hidden="true"
+              src="assets/icons/arrow_right.svg"></svg-icon>
   </button>
   <ul class="ab-dropdown__menu"
       id="elem_list"

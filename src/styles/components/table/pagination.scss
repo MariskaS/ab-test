@@ -1,6 +1,6 @@
-@import "~src/styles/core/variables/variables";
-@import "~src/styles/core/mixins/mixin-flex-variant";
-@import "~src/styles/core/mixins/mixin-focus-variant";
+@import "../../core/variables/variables";
+@import "../../core/mixins/mixin-flex-variant";
+@import "../../core/mixins/mixin-focus-variant";
 
 .ab-pagination {
   &__size {
@@ -39,18 +39,18 @@
       color: var(--pagination-item-color--active);
       background-color: var(--pagination-item-bg--active);
     }
-
-    &.is-disable {
-      opacity: .8;
-      cursor: default;
-      pointer-events: none;
-    }
   }
 
   &__spread {
     color: var(--pagination-spread);
     padding: $pagination-spread-spaces;
     font-size: $pagination-spread-size;
+  }
+
+  .ab-ico {
+    &--left {
+      transform: rotate(180deg);
+    }
   }
 
   // For Desktop & Tablet.

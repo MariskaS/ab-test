@@ -5,7 +5,7 @@ export const transactionTableHeads = [
   {title: 'Return'},
   {title: 'T-Code'},
   {title: 'Amount'},
-  {title: 'Balance'},
+  {title: 'Balance', notSort: true},
 ]
 
 export const transactionTableData = [

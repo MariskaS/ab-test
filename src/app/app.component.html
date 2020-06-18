@@ -28,30 +28,22 @@
 
 <ng-template #transactionsHead>
   <ul>
-    <li>
-      <h3>BOA Interest Free Checking:&nbsp;&nbsp;*&nbsp;7548</h3>
-    </li>
     <li class="ab-full">
-      <div class="ab-ico__group">
-        <i class="ab-ico ab-ico--primary"
-           aria-label="Description of what will happen by clicking on the icon">Ico</i>
-        <i class="ab-ico ab-ico--primary"
-           aria-label="Description of what will happen by clicking on the icon">Ico</i>
-      </div>
+      <h3>BOA Interest Free Checking:&nbsp;&nbsp;*&nbsp;7548</h3>
     </li>
     <li>
       <button app-button
               theme="secondary"
-              iconName="ico"
-              type="button">
+              ariaLabel="To show account balance history"
+              iconName="history">
         account balance history
       </button>
     </li>
     <li>
       <button app-button
               theme="secondary"
-              iconName="ico"
-              type="button">
+              ariaLabel="To show scheduled transactions"
+              iconName="schedule">
         scheduled transactions
       </button>
     </li>

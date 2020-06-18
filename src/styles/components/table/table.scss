@@ -1,5 +1,4 @@
 @import "~src/styles/core/variables/variables";
-@import "~src/styles/core/mixins/mixin-flex-variant";
 @import "~src/styles/core/mixins/mixin-toolbar-variant";
 
 .ab-table {
@@ -86,22 +85,5 @@
     border-left-width: 0;
     border-right-width: 0;
     padding: $space-base-half $space-base;
-  }
-}
-
-
-// If has Sorting.
-.ab-sort {
-  @include flex-variant(flex, start, center);
-
-  &__ico {
-    display: flex;
-    flex-direction: column;
-    margin-left: $space-base-half;
-
-    [class*='ab-ico--'] {
-      padding: $space-small/2 $space-small;
-      cursor: pointer;
-    }
   }
 }
