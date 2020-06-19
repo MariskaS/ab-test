@@ -1,10 +1,4 @@
 import {Component} from '@angular/core';
-import {
-  transactionTableActions,
-  transactionTableData,
-  transactionTableFilter,
-  transactionTableHeads
-} from './mockData'
 
 @Component({
   selector: 'app-root',
@@ -12,8 +6,5 @@ import {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  transactionTableFilter = transactionTableFilter;
-  transactionTableActions = transactionTableActions;
-  transactionTableHeads = transactionTableHeads;
-  transactionTableData = transactionTableData;
+
 }

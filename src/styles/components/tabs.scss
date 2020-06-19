@@ -6,6 +6,7 @@
 .ab-tab {
   &__head {
     &__item {
+      font-family: $font-family-bold;
       background-color: var(--toolbar-head-bg);
       padding: $toolbar-spaces;
       cursor: pointer;
@@ -24,7 +25,6 @@
 
     .is-active {
       border-color: var(--toolbar-head-border--active);
-      font-family: $font-family-bold;
     }
 
     // For Desktop & Tablet.
@@ -52,13 +52,13 @@
     }
   }
 
-  &__toolbar {
+  &__toolbar ::ng-deep {
     @include toolbar-variant(flex-start);
     background-color: var(--toolbar-head-bg);
     padding: $toolbar-spaces;
   }
 
-  &__filter {
+  &__filter ::ng-deep {
     @include toolbar-variant;
     padding: $space-base 0;
     border-top: 1px solid var(--toolbar-border);
