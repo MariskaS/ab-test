@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {TabsData} from "../../interfaces";
 
 @Component({
   selector: 'app-table',
@@ -6,8 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-  @Input() columnsList: any[] = [];
-  @Input() bodyList: any[] = [];
+  @Input() data: TabsData;
 
   checkedAll: boolean = false;
   countSelected = 0;
@@ -18,12 +18,12 @@ export class TableComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.collapsedState = this.columnsList.map(() => false);
+    this.collapsedState = this.data.tableHeads.map(() => false);
   }
 
   /**
    * Toggle collapse row with description.
-   * @param index {number} of table row.
+   * @param {number} index of table row.
    */
   onToggle(index) {
     this.collapsedState[index] = !this.collapsedState[index];
@@ -31,12 +31,12 @@ export class TableComponent implements OnInit {
 
   /**
    * Processing of a click on main checkbox.
-   * @param value {boolean} state main checkbox
+   * @param {boolean} value - state main checkbox
    */
   onCheckAll(value) {
 
     // ForEach all the elements and assign value to report.checked.
-    this.bodyList.forEach((item) => item.checked = value);
+    this.data.tableData.forEach((item) => item.checked = value);
     this.calculateCountCheck();
   }
 
@@ -52,7 +52,7 @@ export class TableComponent implements OnInit {
    * @returns {any[]}
    */
   private getSelectedRows() {
-    return this.bodyList.filter((item) => item.checked);
+    return this.data.tableData.filter((item) => item.checked);
   }
 
   /**
@@ -64,6 +64,6 @@ export class TableComponent implements OnInit {
     this.countSelected = this.getSelectedRows().length;
 
     // find out the state of the main checkbox by comparing the count of selected reports with the count of all reports.
-    this.checkedAll = this.countSelected != 0 && this.countSelected === this.bodyList.length;
+    this.checkedAll = this.countSelected != 0 && this.countSelected === this.data.tableData.length;
   }
 }

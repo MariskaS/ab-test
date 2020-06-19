@@ -12,6 +12,8 @@ import {PaginationComponent} from './components/table/components/pagination/pagi
 import {HttpClientModule} from "@angular/common/http";
 import {AngularSvgIconModule} from "angular-svg-icon";
 import { SortComponent } from './components/table/components/sort/sort.component';
+import { TabsComponent } from './components/tabs/tabs.component';
+import { AccountPageComponent } from './pages/account-page/account-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { SortComponent } from './components/table/components/sort/sort.component
     SearchComponent,
     TableComponent,
     PaginationComponent,
-    SortComponent
+    SortComponent,
+    TabsComponent,
+    AccountPageComponent
   ],
   imports: [
     BrowserModule,

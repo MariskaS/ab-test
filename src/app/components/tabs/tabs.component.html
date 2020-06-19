@@ -1,0 +1,30 @@
+<div class="ab-tab__wrapper">
+  <div class="ab-tab__head"
+       role="tablist">
+    <button class="ab-tab__head__item"
+            role="tab"
+            aria-selected="true"
+            [attr.aria-label]="tab.tabAriaLabel"
+            *ngFor="let tab of tabs"
+            (click)="onSelectTab(tab)"
+            [class.is-active]="tab.active"
+            [attr.aria-controls]="tab.ariaControls"
+            [attr.id]="tabId">{{tab.name}}
+    </button>
+  </div>
+  <div class="ab-tab__toolbar"
+       *ngIf="showToolbar">
+    <ng-content select="[tab-toolbar]"></ng-content>
+  </div>
+  <div class="ab-tab__filter"
+       *ngIf="showFilter">
+    <ng-content select="[tab-filter]"></ng-content>
+  </div>
+  <div class="ab-tab__body"
+       tabindex="0"
+       role="tabpanel"
+       [attr.id]="tabId"
+       [attr.aria-labelledby]="tabId">
+    <ng-content select="[tab-body]"></ng-content>
+  </div>
+</div>

@@ -38,6 +38,9 @@
     border: 1px solid var(--dropdown-border);
     background-color: var(--dropdown-bg);
     z-index: $z-index-dropdown;
+    max-height: $dropdown-menu-height;
+    overflow: hidden;
+    overflow-y: auto;
     @include focus-variant;
 
     &__item {

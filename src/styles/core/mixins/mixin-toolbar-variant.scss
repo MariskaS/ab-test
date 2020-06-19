@@ -1,10 +1,10 @@
 @import "mixin-flex-variant";
 
 @mixin toolbar-variant($full-col-align:flex-end) {
-  ul {
+  > ul {
     margin: -$space-small;
 
-    li {
+    > li {
       padding: $space-small;
     }
 

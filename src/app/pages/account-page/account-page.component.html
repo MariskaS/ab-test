@@ -1,0 +1,44 @@
+<app-tabs [tabs]="accountTabs"
+          (selectedTab)="selectTab($event)">
+  <ng-container tab-toolbar>
+    <ul>
+      <li class="ab-full">
+        <h3>BOA Interest Free Checking:&nbsp;&nbsp;*&nbsp;7548</h3>
+      </li>
+      <li>
+        <button app-button
+                theme="secondary"
+                ariaLabel="To show account balance history"
+                iconName="history">
+          account balance history
+        </button>
+      </li>
+      <li>
+        <button app-button
+                theme="secondary"
+                ariaLabel="To show scheduled transactions"
+                iconName="schedule">
+          scheduled transactions
+        </button>
+      </li>
+    </ul>
+  </ng-container>
+  <ng-container tab-filter>
+    <ul>
+      <li>
+        <app-search></app-search>
+      </li>
+      <li>
+        <app-dropdown [list]="data.tableActions"
+                      dropdownTitle="Actions"></app-dropdown>
+      </li>
+      <li class="ab-full">
+        <app-dropdown [list]="data.tableFilter"
+                      dropdownTitle="Filter"></app-dropdown>
+      </li>
+    </ul>
+  </ng-container>
+  <ng-container tab-body>
+    <app-table [data]="data"></app-table>
+  </ng-container>
+</app-tabs>

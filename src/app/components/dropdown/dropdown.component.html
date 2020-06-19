@@ -3,6 +3,7 @@
           aria-haspopup="listbox"
           aria-labelledby="elem exp_button"
           id="exp_button"
+          [disabled]="!list.length"
           (click)="toggle()"
           type="button">
     <span>{{dropdownTitle}}</span>
