@@ -15,6 +15,8 @@
       transition: border-color $transition-base;
       text-transform: capitalize;
       display: block;
+      width: 100%;
+      text-align: left;
       @include focus-variant;
 
       &:active,
@@ -32,6 +34,7 @@
       display: flex;
 
       &__item {
+        text-align: center;
         max-width: $toolbar-head-width;
         border-left: unset;
         border-top: $toolbar-head-border solid var(--toolbar-head-border);
