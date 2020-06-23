@@ -12,6 +12,9 @@
     font-size: $body-font-size;
     cursor: pointer;
     border: 1px solid var(--dropdown-border);
+    color: currentColor;
+    background-color: transparent;
+    border-radius: $border-radius-base;
     @include flex-variant(inline-flex, center, center);
     @include focus-variant;
 

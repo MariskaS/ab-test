@@ -8,6 +8,7 @@
     &__item {
       font-family: $font-family-bold;
       background-color: var(--toolbar-head-bg);
+      color: currentColor;
       padding: $toolbar-spaces;
       cursor: pointer;
       border: 0;
