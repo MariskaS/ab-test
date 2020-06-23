@@ -15,7 +15,6 @@ export class ButtonComponent {
   @Input() theme: 'primary' | 'secondary' | 'toggle' | 'buttonIcon' = 'primary';
   @Input() type: 'button' | 'submit' = 'button';
   @Input() iconName: string = '';
-  @Input() ariaLabel: '' | null;
 
   @HostBinding('class.ab-btn--primary')
   get isPrimary() {
@@ -40,10 +39,5 @@ export class ButtonComponent {
   @HostBinding('attr.type')
   get isType() {
     return this.type;
-  }
-
-  @HostBinding('attr.aria-label')
-  get isAriaLabel() {
-    return this.ariaLabel;
   }
 }

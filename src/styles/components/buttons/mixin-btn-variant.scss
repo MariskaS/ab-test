@@ -4,7 +4,6 @@
 
 @mixin btn-variant($color, $border, $background, $color-action, $border-action, $background-action) {
   min-height: $btn-height;
-  width: 100%;
   overflow: hidden;
   padding: $btn-spaces;
   font-family: $btn-font;
@@ -17,6 +16,7 @@
   white-space: nowrap;
   user-select: none;
   transition: color $transition-base, background $transition-base;
+  border-radius: $border-radius-base;
   @include flex-variant(inline-flex, center, center);
   @include focus-variant;
 
@@ -48,5 +48,10 @@
   // For Desktop & Tablet.
   @media (min-width: $screen-sx) {
     min-width: $btn-width;
+  }
+
+  // For Small Devices.
+  @media (max-width: $screen-sx) {
+    width: 100%;
   }
 }

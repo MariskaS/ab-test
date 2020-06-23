@@ -86,7 +86,7 @@
             <td>${{data.amount}}</td>
             <td>
               <ng-container *ngIf="data.status !== 'Pending' && data.status !== 'Pending / Hold'; else positiveBalance">
-                <span class="ab-color--red">-${{data.amount}}</span>
+                <span class="ab-color--primary">-${{data.amount}}</span>
               </ng-container>
               <ng-template #positiveBalance>${{data.amount}}</ng-template>
             </td>

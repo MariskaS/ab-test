@@ -18,6 +18,16 @@ $screen-sx: 520px;
 $z-index-dropdown: 2;
 
 /*
+* Scrollbar.
+*/
+$scrollbar-size: 8px;
+
+/*
+* Border Radius.
+*/
+$border-radius-base: 2px;
+
+/*
 * Spaces.
 */
 $space-base: 16px;
@@ -35,6 +45,13 @@ $control-spaces: $space-small $space-base;
 * Animation.
 */
 $transition-base: 270ms ease-in-out;
+
+/*
+* Navbar.
+*/
+$navbar-spaces: $space-base;
+$navbar-font-size: 24px;
+
 
 /*
 * Buttons.

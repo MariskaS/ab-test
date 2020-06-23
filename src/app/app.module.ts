@@ -14,6 +14,7 @@ import {AngularSvgIconModule} from "angular-svg-icon";
 import { SortComponent } from './components/table/components/sort/sort.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { AccountPageComponent } from './pages/account-page/account-page.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AccountPageComponent } from './pages/account-page/account-page.componen
     PaginationComponent,
     SortComponent,
     TabsComponent,
-    AccountPageComponent
+    AccountPageComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

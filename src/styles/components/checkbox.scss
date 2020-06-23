@@ -23,22 +23,28 @@
       display: block;
       height: $checkbox-size;
       width: $checkbox-size;
-      border: 1px solid var(--checkbox-border);
+      border: 2px solid var(--checkbox-border);
       background-color: var(--checkbox-bg);
+      border-radius: $border-radius-base;
     }
 
-    &:checked:before {
-      content: '';
-      transform: rotate(45deg);
-      position: absolute;
-      left: 8px;
-      top: 3px;
-      display: table;
-      width: 8px;
-      height: 14px;
-      border: 1px solid var(--checkbox-checked-icon);
-      border-top: 0;
-      border-left: 0;
+    &:checked {
+      &:after {
+        border-color: var(--checkbox-border-checked);
+      }
+      &:before {
+        content: '';
+        transform: rotate(45deg);
+        position: absolute;
+        left: 8px;
+        top: 3px;
+        display: table;
+        width: 8px;
+        height: 14px;
+        border: 2px solid var(--checkbox-icon-checked);
+        border-top: 0;
+        border-left: 0;
+      }
     }
 
     @include focus-variant;
