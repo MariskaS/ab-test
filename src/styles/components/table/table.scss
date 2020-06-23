@@ -49,14 +49,14 @@
   }
 
   &__head {
-    background-color: var(--table-bg-head);
+    background-color: var(--table-head-bg);
 
     th:not(:first-child):not(:last-child):not(.ab-border-0) {
       border-right: 1px solid var(--table-border);
     }
 
     // Fix - If tbody has scroll.
-    padding-right: $table-head-space;
+    padding-right: $scrollbar-size;
 
     // If no Data in the Table.
     &.is-empty {
