@@ -1,5 +1,7 @@
 import {Component, HostBinding} from '@angular/core';
 
+import {LocalStorageService} from "./services/local-storage.service";
+
 import {THEME} from "./constants";
 
 @Component({
@@ -7,15 +9,12 @@ import {THEME} from "./constants";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent  {
+export class AppComponent {
   @HostBinding('attr.theme')
-  private theme = THEME.dark;
+  public get theme(): string {
+    return this.localStorageService.get('ab-navbar:theme') || THEME.dark;
+  }
 
-  toggleTheme($event: boolean) {
-    if ($event === true) {
-      this.theme = THEME.light;
-    } else {
-      this.theme = THEME.dark;
-    }
+  constructor(private localStorageService: LocalStorageService) {
   }
 }

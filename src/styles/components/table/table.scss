@@ -4,12 +4,9 @@
 .ab-table {
 
   // Stretch container full screen.
-  // For Desktop & Tablet.
-  @media (min-width: $screen-sx) {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 
   table {
     table-layout: fixed;
@@ -34,13 +31,10 @@
   &__body {
 
     // Stretch container full screen.
-    // For Desktop & Tablet.
-    @media (min-width: $screen-sx) {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      overflow-x: auto;
-    }
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
   }
 
   &__toolbar {
@@ -67,7 +61,8 @@
   }
 
   &__content {
-    overflow-y: auto;
+    flex: 1;
+    overflow-x: auto;
 
     tr:nth-of-type(even) {
       background-color: var(--table-bg-zebra);

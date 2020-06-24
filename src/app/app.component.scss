@@ -3,13 +3,9 @@
 :host {
   color: var(--body-color);
   background-color: var(--body-bg);
-  display: block;
 
   // Stretch container full screen.
-  // For Desktop & Tablet.
-  @media (min-width: $screen-sx) {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
