@@ -20,23 +20,21 @@ body {
   line-height: 1.1;
 
   // Stretch container full screen.
-  // For Desktop & Tablet.
-  @media (min-width: $screen-sx) {
-    display: flex;
-  }
+  display: flex;
+  overflow: hidden;
 }
 
 .ab-main {
   padding: $space-base;
+  overflow: auto;
 
   // Stretch container full screen.
+  display: flex;
+  flex: 1;
+
+  // TODO: only for DEMO.
   // For Desktop & Tablet.
   @media (min-width: $screen-sx) {
-    display: flex;
-    flex: 1;
-    overflow: hidden;
-
-    // TODO: only for DEMO.
     max-width: 1200px;
     margin: 0 auto;
   }

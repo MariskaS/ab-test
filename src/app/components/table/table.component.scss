@@ -1,17 +1,13 @@
 @import "~src/styles/components/table/table";
 @import "~src/styles/components/buttons/btn-toggle";
 @import "~src/styles/components/checkbox";
-@import "~src/styles/components/table/table";
 @import "~src/styles/core/mixins/mixin-toolbar-variant";
 
 :host {
 
   // Stretch container full screen.
-  // For Desktop & Tablet.
-  @media (min-width: $screen-sx) {
-    display: flex;
-    flex: 1;
-  }
+  display: flex;
+  flex: 1;
 }
 
 .ab-color--primary {
