@@ -1,10 +1,17 @@
 /*
 * Font.
 */
+$font-family-extra-bold: 'Proxima Extra Bold', Arial, sans-serif;
 $font-family-bold: 'Proxima Bold', Arial, sans-serif;
 $font-family-regular: 'Proxima Reg', Arial, sans-serif;
 
-$body-font-size: 14px;
+$font-size-large: 24px;
+$font-size-base: 14px;
+
+/*
+* Body.
+*/
+$body-font-size: $font-size-base;
 $body-font-family: $font-family-regular;
 
 /*
@@ -50,8 +57,7 @@ $transition-base: 270ms ease-in-out;
 * Navbar.
 */
 $navbar-spaces: $space-base;
-$navbar-font-size: 24px;
-
+$navbar-font-size: $font-size-large;
 
 /*
 * Buttons.
@@ -62,14 +68,10 @@ $btn-spaces: $control-spaces;
 $btn-font: $font-family-bold;
 $btn-icon-space: $space-small;
 
-// Toggle.
-$btn-toggle-size: 28px;
-$btn-toggle-radius: 50%;
-
 /*
 * Icons.
 */
-$ico-size-base: 24px;
+$ico-size-base: $font-size-large;
 
 /*
 * Search Input.
@@ -82,7 +84,7 @@ $search-icon-spaces: $space-base;
 /*
 * CheckBox.
 */
-$checkbox-size: 24px;
+$checkbox-size: $font-size-large;
 
 /*
 * Dropdown.
@@ -94,30 +96,24 @@ $dropdown-menu-height: 200px;
 $dropdown-menu-item-spaces: $space-base;
 
 /*
-* Table.
+* Card.
 */
-$table-col-spaces: $space-base;
-$table-col-width: 120px;
-$table-col-spaces-sm: $space-small;
-$table-toolbar-spaces: $space-base $space-small;
-
-// Fix - If tbody has scroll.
-$table-head-space: 17px;
+$card-width: 300px;
+$card-spaces: $space-base;
+$card-radius: $border-radius-base;
+$card-head-font: $font-family-extra-bold;
 
 /*
-* Toolbar.
+* No Data.
 */
-$toolbar-spaces: $space-base;
-$toolbar-head-width: 150px;
-$toolbar-head-border: 3px;
+$no-data-font-family: $font-family-extra-bold;
+$no-data-font-size: $font-size-large;
+$no-data-spaces: $space-base-double 0;
 
 /*
-* Pagination.
+* Tabs.
 */
-$pagination-item-size: 24px;
+$tab-spaces: $space-base;
+$tab-head-width: 150px;
+$tab-head-border: 3px;
 
-$pagination-item-border: 2px;
-$pagination-item-spaces: $space-small;
-
-$pagination-spread-size: 20px;
-$pagination-spread-spaces: 0 $space-base-half;

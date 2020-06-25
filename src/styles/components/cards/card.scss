@@ -1,0 +1,25 @@
+@import '~src/styles/core/variables/variables';
+@import '~src/styles/core/mixins/mixin-toolbar-variant';
+
+.ab-card {
+  border: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  border-radius: $card-radius;
+  width: 100%;
+
+  &__head,
+  &__body,
+  &__footer {
+    padding: $card-spaces;
+  }
+
+  &__head ::ng-deep {
+    font-family: $card-head-font;
+    @include toolbar-variant;
+  }
+
+  &__body {
+    flex: 1;
+  }
+}

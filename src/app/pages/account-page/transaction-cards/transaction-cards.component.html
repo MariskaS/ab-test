@@ -1,0 +1,60 @@
+<div class="ab-toolbar">
+  <div class="ab-checkbox">
+    <input type="checkbox"
+           [(ngModel)]="checkedAll"
+           (ngModelChange)="onCheckAll($event)"
+           aria-label="Select All"/>
+  </div>
+  <p>Selected Items:&nbsp;<strong>{{countSelected}}</strong></p>
+</div>
+
+<div class="ab-grid">
+  <app-card class="ab-grid__item"
+            *ngFor="let data of data?.tableData;">
+    <ng-container card-head>
+      <ul>
+        <li>
+          <div class="ab-checkbox">
+            <input type="checkbox"
+                   [(ngModel)]="data.checked"
+                   (ngModelChange)="onCheck()"
+                   aria-label="Select table row"/>
+          </div>
+        </li>
+        <li><p>Status:&nbsp;{{data.status}}</p></li>
+      </ul>
+    </ng-container>
+    <ng-container card-body>
+      <div class="ab-list">
+        <div class="ab-list__row"
+             *ngIf="data.check">
+          <label class="ab-list__label">Check:</label>
+          <span>{{data.check}}</span>
+        </div>
+        <div class="ab-list__row"
+             *ngIf="data.returnData">
+          <label class="ab-list__label">Return:</label>
+          <span>{{data.returnData}}</span>
+        </div>
+        <div class="ab-list__row"
+             *ngIf="data.tCode">
+          <label class="ab-list__label">T-Code:</label>
+          <span>{{data.tCode}}</span>
+        </div>
+        <div class="ab-list__row"
+             *ngIf="data.amount">
+          <label class="ab-list__label">Balance:</label>
+          <span>
+            <ng-container *ngIf="data.status !== 'Pending' && data.status !== 'Pending / Hold'; else positiveBalance">
+              <span class="ab-color--primary">-${{data.amount}}</span>
+            </ng-container>
+            <ng-template #positiveBalance>${{data.amount}}</ng-template>
+          </span>
+        </div>
+        <div class="ab-list__info">
+          <p>{{data.description}}</p>
+        </div>
+      </div>
+    </ng-container>
+  </app-card>
+</div>

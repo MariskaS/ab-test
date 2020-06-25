@@ -1,5 +1,6 @@
 @import "~src/styles/core/variables/variables";
 @import "~src/styles/core/mixins/mixin-focus-variant";
+@import "~src/styles/core/mixins/mixin-container";
 
 ::-webkit-scrollbar {
   width: $scrollbar-size;
@@ -27,17 +28,11 @@ body {
 .ab-main {
   padding: $space-base;
   overflow: auto;
+  @include container;
 
   // Stretch container full screen.
   display: flex;
   flex: 1;
-
-  // TODO: only for DEMO.
-  // For Desktop & Tablet.
-  @media (min-width: $screen-sx) {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
 }
 
 strong {

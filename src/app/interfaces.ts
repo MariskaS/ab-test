@@ -7,7 +7,6 @@ export interface TabsItem {
 }
 
 export interface TabsData {
-  tableHeads: any[],
   tableData: any[],
   tableActions?: any[],
   tableFilter?: any[],

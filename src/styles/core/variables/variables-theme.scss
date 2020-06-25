@@ -31,6 +31,8 @@
 [theme='light'],
 [theme='dark'] {
 
+  --bg-zebra: var(--color-gray-light);
+
   /*
   * Scrollbar.
   */
@@ -57,9 +59,6 @@
   --btn-secondary-border--action: var(--color-primary);
   --btn-secondary-bg--action: var(--color-primary);
 
-  // Toggle.
-  --btn-toggle-bg: var(--color-gray);
-
   /*
   * Inputs.
   */
@@ -84,27 +83,17 @@
   --dropdown-bg--action: var(--color-gray-light);
 
   /*
-  * Table.
+  * Card.
   */
-  --table-head-bg: var(--color-gray-light);
-  --table-border: var(--color-gray);
-  --table-bg-zebra: var(--color-gray-light);
+  --card-border: var(--color-gray);
 
   /*
-  * Toolbar.
+  * Tabs.
   */
-  --toolbar-head-bg: var(--color-gray-light);
-  --toolbar-head-border: var(--color-gray);
-  --toolbar-head-border--active: var(--color-primary);
-  --toolbar-border: var(--color-gray);
-
-  /*
-  * Pagination.
-  */
-  --pagination-item-bg--acton: var(--color-gray-light);
-
-  --pagination-item-bg--active: var(--color-primary);
-  --pagination-item-color--active: var(--color-white);
+  --tab-head-bg: var(--color-gray-light);
+  --tab-head-border: var(--color-gray);
+  --tab-head-border--active: var(--color-primary);
+  --tab-border: var(--color-gray);
 
   /*
   * Custom Focus.

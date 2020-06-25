@@ -1,0 +1,12 @@
+<div class="ab-card">
+  <div class="ab-card__head">
+    <ng-content select="[card-head]"></ng-content>
+  </div>
+  <div class="ab-card__body">
+    <ng-content select="[card-body]"></ng-content>
+  </div>
+  <div class="ab-card__footer"
+       *ngIf="showFooter">
+    <ng-content select="[card-footer]"></ng-content>
+  </div>
+</div>

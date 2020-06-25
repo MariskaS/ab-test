@@ -1,33 +1,16 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {TabsData} from "../../interfaces";
+import {Component, Input} from '@angular/core';
+import {TabsData} from "../../../interfaces";
 
 @Component({
-  selector: 'app-table',
-  templateUrl: './table.component.html',
-  styleUrls: ['./table.component.scss']
+  selector: 'app-transaction-cards',
+  templateUrl: './transaction-cards.component.html',
+  styleUrls: ['./transaction-cards.component.scss']
 })
-export class TableComponent implements OnInit {
+export class TransactionCardsComponent {
   @Input() data: TabsData;
 
   checkedAll: boolean = false;
   countSelected = 0;
-
-  collapsedState: boolean[] = [];
-
-  constructor() {
-  }
-
-  ngOnInit() {
-    this.collapsedState = this.data.tableHeads.map(() => false);
-  }
-
-  /**
-   * Toggle collapse row with description.
-   * @param {number} index of table row.
-   */
-  onToggle(index) {
-    this.collapsedState[index] = !this.collapsedState[index];
-  }
 
   /**
    * Processing of a click on main checkbox.

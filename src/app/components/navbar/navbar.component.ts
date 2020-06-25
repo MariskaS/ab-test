@@ -32,7 +32,6 @@ export class NavbarComponent {
    */
   saveThemeInLocalStorage(theme: string) {
     this.localStorageService.set('ab-navbar:theme', theme);
-    console.log('theme', theme)
   }
 
 }

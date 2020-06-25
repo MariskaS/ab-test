@@ -1,0 +1,6 @@
+<ng-content *ngIf="data?.length>0"
+            select="[content]"></ng-content>
+<div class="ab-content__empty"
+     *ngIf="!data?.length">
+  <ng-content select="[no-content]"></ng-content>
+</div>

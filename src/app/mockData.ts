@@ -1,4 +1,4 @@
-import {TabsData, TabsItem} from "./interfaces";
+import {TabsData, TabsItem} from './interfaces';
 
 export const accountTabs: TabsItem[] = [
   {
@@ -18,15 +18,6 @@ export const accountTabs: TabsItem[] = [
 ]
 
 export const accountTransactionsTabsData: TabsData = {
-  tableHeads: [
-    {title: 'Status #'},
-    {title: 'Description'},
-    {title: 'Check'},
-    {title: 'Return'},
-    {title: 'T-Code'},
-    {title: 'Amount'},
-    {title: 'Balance', notSort: true},
-  ],
   tableData: [
     {
       status: 'Processing',
@@ -39,7 +30,8 @@ export const accountTransactionsTabsData: TabsData = {
     },
     {
       status: 'Pending',
-      description: ` A ab ad amet at atque consequatur doloremque ducimus enim eos excepturi exercitationem impedit maiores maxime molestias possimus quia rerum tempora, voluptatem!`,
+      description: ` A ab ad amet at atque consequatur doloremque ducimus enim eos excepturi
+       exercitationem impedit maiores maxime molestias possimus quia rerum tempora, voluptatem!`,
       check: '383931',
       returnData: '01',
       tCode: 'POS',
@@ -578,15 +570,6 @@ export const accountTransactionsTabsData: TabsData = {
 }
 
 export const accountStatementsTabsData: TabsData = {
-  tableHeads: [
-    {title: 'Title #'},
-    {title: 'Title 1', notSort: true},
-    {title: 'Title 2'},
-    {title: 'Title 3'},
-    {title: 'Title 4', notSort: true},
-    {title: 'Title 5', notSort: true},
-    {title: 'Title 6', notSort: true},
-  ],
   tableData: [],
   tableActions: [],
   tableFilter: []

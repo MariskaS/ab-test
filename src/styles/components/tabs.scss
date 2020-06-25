@@ -7,12 +7,12 @@
   &__head {
     &__item {
       font-family: $font-family-bold;
-      background-color: var(--toolbar-head-bg);
+      background-color: var(--tab-head-bg);
       color: currentColor;
-      padding: $toolbar-spaces;
+      padding: $tab-spaces;
       cursor: pointer;
       border: 0;
-      border-left: $toolbar-head-border solid var(--toolbar-head-border);
+      border-left: $tab-head-border solid var(--tab-head-border);
       transition: border-color $transition-base;
       text-transform: capitalize;
       display: block;
@@ -20,14 +20,17 @@
       text-align: left;
       @include focus-variant;
 
+      // For correct :focus on the tab.
+      position: relative;
+
       &:active,
       &:hover {
-        border-color: var(--toolbar-head-border--active);
+        border-color: var(--tab-head-border--active);
       }
     }
 
     .is-active {
-      border-color: var(--toolbar-head-border--active);
+      border-color: var(--tab-head-border--active);
     }
 
     // For Desktop & Tablet.
@@ -36,16 +39,16 @@
 
       &__item {
         text-align: center;
-        max-width: $toolbar-head-width;
+        max-width: $tab-head-width;
         border-left: unset;
-        border-top: $toolbar-head-border solid var(--toolbar-head-border);
+        border-top: $tab-head-border solid var(--tab-head-border);
       }
     }
   }
 
   &__body {
+    overflow: hidden;
     overflow-y: auto;
-    overflow-x: hidden;
     @include focus-variant;
 
     // Stretch container full screen.
@@ -55,14 +58,14 @@
 
   &__toolbar ::ng-deep {
     @include toolbar-variant(flex-start);
-    background-color: var(--toolbar-head-bg);
-    padding: $toolbar-spaces;
+    background-color: var(--tab-head-bg);
+    padding: $tab-spaces;
   }
 
   &__filter ::ng-deep {
     @include toolbar-variant;
     padding: $space-base 0;
-    border-top: 1px solid var(--toolbar-border);
+    border-top: 1px solid var(--tab-border);
   }
 
   &__wrapper {

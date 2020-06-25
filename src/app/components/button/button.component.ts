@@ -12,7 +12,7 @@ import {Component, HostBinding, Input} from '@angular/core';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {
-  @Input() theme: 'primary' | 'secondary' | 'toggle' | 'buttonIcon' = 'primary';
+  @Input() theme: 'primary' | 'secondary' | 'buttonIcon' = 'primary';
   @Input() type: 'button' | 'submit' = 'button';
   @Input() iconName: string = '';
 
@@ -24,11 +24,6 @@ export class ButtonComponent {
   @HostBinding('class.ab-btn--secondary')
   get isSecondary() {
     return this.theme === 'secondary';
-  }
-
-  @HostBinding('class.ab-btn--toggle')
-  get isToggle() {
-    return this.theme === 'toggle';
   }
 
   @HostBinding('class.ab-btn--icon')

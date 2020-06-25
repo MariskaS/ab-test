@@ -1,0 +1,14 @@
+@import '~src/styles/core/mixins/mixin-no-data';
+
+:host {
+
+  // Stretch container full screen.
+  display: flex;
+  flex: 1;
+}
+
+.ab-content__empty {
+  @include no-data;
+  text-align: center;
+  flex: 1;
+}

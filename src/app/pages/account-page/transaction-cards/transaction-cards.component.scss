@@ -1,0 +1,41 @@
+@import '~src/styles/components/checkbox';
+@import '~src/styles/components/list';
+
+:host {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ab-color--primary {
+  color: var(--color-primary-dark);
+}
+
+.ab-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1;
+  overflow-x: auto;
+
+  &__item {
+    width: 100%;
+    padding: $space-base-half;
+
+    // For Desktop & Tablet.
+    @media (min-width: $screen-sx) {
+      max-width: $card-width;
+    }
+  }
+}
+
+.ab-toolbar {
+  display: flex;
+  align-items: center;
+  padding: 0 0 $space-base;
+
+  .ab-checkbox {
+    margin-right: $space-base;
+  }
+}
+

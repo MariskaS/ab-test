@@ -11,8 +11,9 @@ Task - Implement the interface using HTML/CSS and Angular.
 **Additional packages:** [angular-svg-icon](https://github.com/czeckd/angular-svg-icon)
 
 ## Comments
+1. LocalStorage Service (used to save the selected color scheme(`dark`|| `light` mode) of the project).
 1. Reusable components such as Buttons and Dropdown.
-1. Responsive for all components except the `table` .  
+1. Responsive for all components. 
 1. Variable system(Css/Scss) - The color variables are made in **CSS** for the ability to quickly change the 
 Color Theme and that there is no need to import them into components.
 

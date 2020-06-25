@@ -3,7 +3,7 @@
   <ng-container tab-toolbar>
     <ul>
       <li class="ab-full">
-        <h3>BOA Interest Free Checking:&nbsp;&nbsp;*&nbsp;7548</h3>
+        <h3 class="ab-tab__title">BOA Interest Free Checking:&nbsp;&nbsp;*&nbsp;7548</h3>
       </li>
       <li>
         <button app-button
@@ -39,6 +39,15 @@
     </ul>
   </ng-container>
   <ng-container tab-body>
-    <app-table [data]="data"></app-table>
+
+    <app-content [data]="data.tableData">
+      <ng-container content>
+        <app-transaction-cards [data]="data"></app-transaction-cards>
+      </ng-container>
+      <ng-container no-content>
+        <p>No data...</p>
+      </ng-container>
+    </app-content>
+
   </ng-container>
 </app-tabs>

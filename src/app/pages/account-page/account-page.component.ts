@@ -21,13 +21,9 @@ export class AccountPageComponent {
   selectTab(tabName) {
     if (tabName === 'account transactions') {
       this.data = accountTransactionsTabsData;
-      console.log('tabName', tabName)
-      console.log('data', this.data)
     }
     if (tabName === 'bank statements') {
       this.data = accountStatementsTabsData;
-      console.log('tabName', tabName)
-      console.log('data', this.data)
     }
   }
 
