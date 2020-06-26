@@ -1,4 +1,4 @@
-<div class="ab-toolbar">
+<div class="ab-toolbar--main">
   <div class="ab-checkbox">
     <input type="checkbox"
            [(ngModel)]="checkedAll"
@@ -12,17 +12,15 @@
   <app-card class="ab-grid__item"
             *ngFor="let data of data?.tableData;">
     <ng-container card-head>
-      <ul>
-        <li>
-          <div class="ab-checkbox">
-            <input type="checkbox"
-                   [(ngModel)]="data.checked"
-                   (ngModelChange)="onCheck()"
-                   aria-label="Select table row"/>
-          </div>
-        </li>
-        <li><p>Status:&nbsp;{{data.status}}</p></li>
-      </ul>
+      <div class="ab-toolbar">
+        <div class="ab-checkbox">
+          <input type="checkbox"
+                 [(ngModel)]="data.checked"
+                 (ngModelChange)="onCheck()"
+                 aria-label="Select table row"/>
+        </div>
+        <p>Status:&nbsp;{{data.status}}</p>
+      </div>
     </ng-container>
     <ng-container card-body>
       <div class="ab-list">

@@ -27,7 +27,7 @@ export class ButtonComponent {
   }
 
   @HostBinding('class.ab-btn--icon')
-  get isSort() {
+  get isIcon() {
     return this.theme === 'buttonIcon';
   }
 

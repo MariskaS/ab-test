@@ -6,3 +6,20 @@
   display: flex;
   flex: 1;
 }
+
+.ab-tab__title {
+  font-family: $font-family-extra-bold;
+  display: flex;
+  align-items: center;
+
+  h3 {
+    margin-right: $space-base-half;
+  }
+}
+
+// For active icon Filter.
+.isActive {
+  ::ng-deep svg {
+    color: var(--color-primary);
+  }
+}

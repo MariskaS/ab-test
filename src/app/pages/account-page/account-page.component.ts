@@ -13,6 +13,7 @@ import {
 export class AccountPageComponent {
   accountTabs = accountTabs;
   data = accountTransactionsTabsData;
+  isOpen: boolean = true;
 
   /**
    * Choice tab and filter data
@@ -27,4 +28,7 @@ export class AccountPageComponent {
     }
   }
 
+  toggleFilter() {
+    this.isOpen = !this.isOpen;
+  }
 }
