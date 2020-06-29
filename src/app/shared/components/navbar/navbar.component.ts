@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
-import {LocalStorageService} from "../../services/local-storage.service";
-import {THEME} from "../../constants";
+
+import {LocalStorageService} from '../../services/local-storage.service';
+import {THEME} from '../../../constants';
 
 @Component({
   selector: 'app-navbar',

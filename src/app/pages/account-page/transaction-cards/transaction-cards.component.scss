@@ -30,13 +30,13 @@
 
     // For Desktop & Tablet.
     @media (min-width: $screen-md) {
-      width: calc(100% * 1 / 3 - #{$space-base-half});
+      width: calc(100% * 1 / 3);
       max-width: unset;
     }
 
     // For Desktop & Tablet.
     @media (min-width: $screen-lg) {
-      width: calc(100% * 1 / 4 - #{$space-base-half});
+      width: calc(100% * 1 / 4);
       max-width: unset;
     }
 

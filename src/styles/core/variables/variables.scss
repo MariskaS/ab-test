@@ -25,6 +25,7 @@ $screen-lg: 1200px;
 * Z-index.
 */
 $z-index-dropdown: 2;
+$z-index-sidebar: 3;
 
 /*
 * Scrollbar.
@@ -118,3 +119,12 @@ $tab-spaces: $space-base;
 $tab-head-width: 150px;
 $tab-head-border: 3px;
 
+/*
+* Sidebar.
+*/
+$sidebar-spaces: $space-base;
+
+$sidebar-head-height: 60px;
+
+$sidebar-title-font-family: $font-family-extra-bold;
+$sidebar-title-font-size: $font-size-large;

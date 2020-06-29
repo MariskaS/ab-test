@@ -1,5 +1,4 @@
- <app-tabs [tabs]="accountTabs"
-          [showFilter]="isOpen"
+<app-tabs [tabs]="accountTabs"
           (selectedTab)="selectTab($event)">
   <ng-container tab-toolbar>
     <ul>
@@ -34,21 +33,6 @@
       </li>
     </ul>
   </ng-container>
-  <ng-container *ngIf="isOpen" tab-filter>
-    <ul>
-      <li>
-        <app-search></app-search>
-      </li>
-      <li>
-        <app-dropdown [list]="data.tableActions"
-                      dropdownTitle="Actions"></app-dropdown>
-      </li>
-      <li class="ab-full">
-        <app-dropdown [list]="data.tableFilter"
-                      dropdownTitle="Filter"></app-dropdown>
-      </li>
-    </ul>
-  </ng-container>
   <ng-container tab-body>
 
     <app-content [data]="data.tableData">
@@ -62,3 +46,19 @@
 
   </ng-container>
 </app-tabs>
+
+<app-sidebar *ngIf="isOpen"
+             sidebarTitle="Filter">
+  <ng-container sidebar-body>
+    <form>
+      <app-search></app-search>
+
+      <app-dropdown [list]="data.tableActions"
+                    dropdownTitle="Actions"></app-dropdown>
+
+      <app-dropdown [list]="data.tableFilter"
+                    dropdownTitle="Filter"></app-dropdown>
+
+    </form>
+  </ng-container>
+</app-sidebar>

@@ -4,7 +4,7 @@ Task - Implement the interface using HTML/CSS and Angular.
 ## Description  
 **[Live Demo](http://mariskas.github.io/)** - here is a build version of the test task. 
 
-**Technologies:** Angular 8, HTML/Scss, Typescript, HTML/Scss, JavaScript.  
+**Technologies:** [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0, HTML/Scss, Typescript, HTML/Scss, JavaScript.  
 
 **Tools:** Webstorm, Git, GitHub.
 

@@ -20,12 +20,14 @@
       text-align: left;
       @include focus-variant;
 
-      // For correct :focus on the tab.
-      position: relative;
-
       &:active,
       &:hover {
         border-color: var(--tab-head-border--active);
+      }
+
+      // For correct :focus on the tab.
+      &:focus {
+        z-index: 1;
       }
     }
 
@@ -60,12 +62,6 @@
     @include toolbar-variant(flex-start);
     background-color: var(--tab-head-bg);
     padding: $tab-spaces;
-  }
-
-  &__filter ::ng-deep {
-    @include toolbar-variant;
-    padding: $space-base 0;
-    border-top: 1px solid var(--tab-border);
   }
 
   &__wrapper {

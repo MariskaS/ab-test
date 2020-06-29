@@ -1,0 +1,15 @@
+<aside class="ab-sidebar">
+  <div class="ab-sidebar__head">
+    <h3 class="ab-sidebar__title">{{sidebarTitle}}</h3>
+    <button app-button
+            theme="buttonIcon"
+            aria-label="To toggle a filter block"
+            title="To close a filter block"
+            (click)="closeFilter()"
+            type="button"
+            iconName="close"></button>
+  </div>
+  <div class="ab-sidebar__body">
+    <ng-content select="[sidebar-body]"></ng-content>
+  </div>
+</aside>

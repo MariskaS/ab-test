@@ -93,7 +93,13 @@
   --tab-head-bg: var(--color-gray-light);
   --tab-head-border: var(--color-gray);
   --tab-head-border--active: var(--color-primary);
-  --tab-border: var(--color-gray);
+
+  /*
+  * Sidebar.
+  */
+  --sidebar-bg: var(--body-bg);
+  --sidebar-border: var(--color-gray);
+
 
   /*
   * Custom Focus.

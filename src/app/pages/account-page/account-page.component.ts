@@ -1,14 +1,14 @@
-import {Component} from '@angular/core';
+import {Component} from "@angular/core";
 import {
   accountTabs,
   accountStatementsTabsData,
   accountTransactionsTabsData
-} from '../../mockData';
+} from "../../mockData";
 
 @Component({
-  selector: 'app-account-page',
-  templateUrl: './account-page.component.html',
-  styleUrls: ['./account-page.component.scss']
+  selector: "app-account-page",
+  templateUrl: "./account-page.component.html",
+  styleUrls: ["./account-page.component.scss"]
 })
 export class AccountPageComponent {
   accountTabs = accountTabs;

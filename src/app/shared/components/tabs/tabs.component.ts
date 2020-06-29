@@ -8,7 +8,6 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 export class TabsComponent implements OnInit {
   @Input() tabs: any[] = [];
   @Input() showToolbar: boolean = true;
-  @Input() showFilter: boolean = true;
 
   tabId: string = '';
 
