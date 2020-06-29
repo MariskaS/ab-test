@@ -1,16 +1,30 @@
-import {Component, Input} from '@angular/core';
-import {TabsData} from "../../../interfaces";
+import {Component, Input, OnInit} from '@angular/core';
+
+import {Observable} from "rxjs";
+import {select, Store} from "@ngrx/store";
+import {selectFilterOpen} from "../../../store/filter/filter.selectors";
+import {FilterState, TabsData} from "../../../interfaces";
+import {FilterCloseAction, FilterToggleAction} from "../../../store/filter/filter.actions";
 
 @Component({
   selector: 'app-transaction-cards',
   templateUrl: './transaction-cards.component.html',
   styleUrls: ['./transaction-cards.component.scss']
 })
-export class TransactionCardsComponent {
+export class TransactionCardsComponent implements OnInit {
   @Input() data: TabsData;
 
-  checkedAll: boolean = false;
-  countSelected = 0;
+  public checkedAll: boolean = false;
+  public countSelected = 0;
+
+  public open$: Observable<boolean>;
+
+  constructor(private store$: Store<FilterState>) {
+  }
+
+  ngOnInit() {
+    this.open$ = this.store$.pipe(select(selectFilterOpen))
+  }
 
   /**
    * Processing of a click on main checkbox.
@@ -49,4 +63,13 @@ export class TransactionCardsComponent {
     // find out the state of the main checkbox by comparing the count of selected reports with the count of all reports.
     this.checkedAll = this.countSelected != 0 && this.countSelected === this.data.tableData.length;
   }
+
+  toggleFilter() {
+    this.store$.dispatch(new FilterToggleAction())
+  }
+
+  closeFilter() {
+    this.store$.dispatch(new FilterCloseAction())
+  }
+
 }

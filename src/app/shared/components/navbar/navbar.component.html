@@ -1,15 +1,46 @@
 <nav class="ab-nav"
      aria-label="Top Toolbar">
-  <ul>
-    <li>
+  <ul class="ab-nav__menu">
+    <li class="ab-full">
       <a href="./"
          class="ab-nav__logo">Angular app</a>
     </li>
-    <li class="ab-full">
+    <li>
       <button app-button
               iconName="invert_colors"
               (click)="toggleTheme()"
               aria-label="To switch application theme">Switch theme</button>
     </li>
+    <li>
+      <button app-button
+              theme="buttonIcon"
+              aria-label="To toggle a navigation menu block"
+              title="To toggle a navigation menu block"
+              (click)="toggleNav()"
+              type="button"
+              [class.isActiveIcon]="open$ | async"
+              iconName="menu_vert"></button>
+    </li>
   </ul>
 </nav>
+
+<app-sidebar *ngIf="open$ | async"
+             sidebarTitle="Sidebar">
+  <ng-container sidebar-head>
+    <button app-button
+            theme="buttonIcon"
+            aria-label="To toggle a navigation menu block"
+            title="To close a navigation menu block"
+            (click)="closeNav()"
+            type="button"
+            iconName="close"></button>
+  </ng-container>
+  <ng-container sidebar-body>
+
+    <a class="ab-nav__link"
+       *ngFor="let link of mainNavigationList"
+       routerLinkActive="isActiveTxt"
+       [routerLink]="[link.url]">{{link.name}}</a>
+
+  </ng-container>
+</app-sidebar>

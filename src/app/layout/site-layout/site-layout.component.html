@@ -1,12 +1,5 @@
 <app-navbar></app-navbar>
 
-<ul>
-  <li *ngFor="let link of links"
-      routerLinkActive="isActiveLink">
-    <a [routerLink]="[link.url]">{{link.name}}</a>
-  </li>
-</ul>
-
 <main class="ab-main">
   <router-outlet></router-outlet>
 </main>

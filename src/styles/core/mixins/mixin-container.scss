@@ -1,4 +1,6 @@
-@mixin container {
+@mixin container($spaces) {
+  padding: $spaces;
+
   // For Desktop & Tablet.
   @media (min-width: $screen-sx) {
     width: 100%;

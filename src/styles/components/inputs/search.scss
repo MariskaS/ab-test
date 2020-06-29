@@ -5,7 +5,7 @@
   @include flex-variant(inline-flex, center, center);
   @include input-variant(
       $search-height,
-      $search-width,
+      100%,
       var(--input-color),
       var(--input-border),
       var(--input-bg),

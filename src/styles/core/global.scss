@@ -25,9 +25,8 @@ body {
 }
 
 .ab-main {
-  padding: $space-base;
   overflow: auto;
-  @include container;
+  @include container($space-base);
 
   // Stretch container full screen.
   display: flex;

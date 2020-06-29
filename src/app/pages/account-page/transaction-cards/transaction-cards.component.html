@@ -1,26 +1,40 @@
-<div class="ab-toolbar--main">
-  <div class="ab-checkbox">
-    <input type="checkbox"
-           [(ngModel)]="checkedAll"
-           (ngModelChange)="onCheckAll($event)"
-           aria-label="Select All"/>
-  </div>
-  <p>Selected Items:&nbsp;<strong>{{countSelected}}</strong></p>
-</div>
+<ul class="ab-toolbar--main">
+  <li class="ab-nowrap">
+    <div class="ab-checkbox">
+      <input type="checkbox"
+             [(ngModel)]="checkedAll"
+             (ngModelChange)="onCheckAll($event)"
+             aria-label="Select All"/>
+    </div>
+    <p>Selected Items:&nbsp;<strong>{{countSelected}}</strong></p>
+  </li>
+  <li class="ab-full">
+    <button app-button
+            theme="buttonIcon"
+            aria-label="To toggle a filter block"
+            title="To toggle a filter block"
+            (click)="toggleFilter()"
+            type="button"
+            [class.isActiveIcon]="open$ | async"
+            iconName="filter"></button>
+  </li>
+</ul>
 
 <div class="ab-grid">
   <app-card class="ab-grid__item"
             *ngFor="let data of data?.tableData;">
     <ng-container card-head>
-      <div class="ab-toolbar">
-        <div class="ab-checkbox">
-          <input type="checkbox"
-                 [(ngModel)]="data.checked"
-                 (ngModelChange)="onCheck()"
-                 aria-label="Select table row"/>
-        </div>
-        <p>Status:&nbsp;{{data.status}}</p>
-      </div>
+      <ul class="ab-toolbar">
+        <li class="ab-nowrap">
+          <div class="ab-checkbox">
+            <input type="checkbox"
+                   [(ngModel)]="data.checked"
+                   (ngModelChange)="onCheck()"
+                   aria-label="Select table row"/>
+          </div>
+          <p>Status:&nbsp;{{data.status}}</p>
+        </li>
+      </ul>
     </ng-container>
     <ng-container card-body>
       <div class="ab-list">
@@ -56,3 +70,32 @@
     </ng-container>
   </app-card>
 </div>
+
+<app-sidebar *ngIf="open$ | async"
+             sidebarTitle="Filter">
+  <ng-container sidebar-head>
+    <button app-button
+            theme="buttonIcon"
+            aria-label="To toggle a filter block"
+            title="To close a filter block"
+            (click)="closeFilter()"
+            type="button"
+            iconName="close"></button>
+  </ng-container>
+  <ng-container sidebar-body>
+    <form class="ab-form">
+      <div class="ab-form__row">
+        <app-search></app-search>
+      </div>
+
+      <div class="ab-form__row">
+        <app-dropdown [list]="data.tableActions"
+                      dropdownTitle="Actions"></app-dropdown>
+      </div>
+      <div class="ab-form__row">
+        <app-dropdown [list]="data.tableFilter"
+                      dropdownTitle="Filter"></app-dropdown>
+      </div>
+    </form>
+  </ng-container>
+</app-sidebar>

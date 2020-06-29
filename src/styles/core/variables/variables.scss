@@ -5,7 +5,8 @@ $font-family-extra-bold: 'Proxima Extra Bold', Arial, sans-serif;
 $font-family-bold: 'Proxima Bold', Arial, sans-serif;
 $font-family-regular: 'Proxima Reg', Arial, sans-serif;
 
-$font-size-large: 24px;
+$font-size-lg: 24px;
+$font-size-md: 16px;
 $font-size-base: 14px;
 
 /*
@@ -59,8 +60,13 @@ $transition-base: 270ms ease-in-out;
 /*
 * Navbar.
 */
-$navbar-spaces: $space-base;
-$navbar-font-size: $font-size-large;
+$navbar-spaces: 0 $space-base;
+$navbar-font-size: $font-size-lg;
+
+$navbar-link-height: $control-height;
+$navbar-link-spaces: $space-base 0;
+$navbar-link-font-family: $font-family-bold;
+$navbar-link-font-size: $font-size-md;
 
 /*
 * Buttons.
@@ -68,31 +74,29 @@ $navbar-font-size: $font-size-large;
 $btn-height: $control-height - 10px;
 $btn-width: 150px;
 $btn-spaces: $control-spaces;
-$btn-font: $font-family-bold;
+$btn-font-family: $font-family-bold;
 $btn-icon-space: $space-small;
 
 /*
 * Icons.
 */
-$ico-size-base: $font-size-large;
+$ico-size-base: $font-size-lg;
 
 /*
 * Search Input.
 */
 $search-height: $control-height;
 $search-spaces: $control-spaces;
-$search-width: 300px;
 $search-icon-spaces: $space-base;
 
 /*
 * CheckBox.
 */
-$checkbox-size: $font-size-large;
+$checkbox-size: $font-size-lg;
 
 /*
 * Dropdown.
 */
-$dropdown-width: 150px;
 $dropdown-height: $control-height;
 $dropdown-btn-spaces: $control-spaces;
 $dropdown-menu-height: 200px;
@@ -103,13 +107,13 @@ $dropdown-menu-item-spaces: $space-base;
 */
 $card-spaces: $space-base;
 $card-radius: $border-radius-base;
-$card-head-font: $font-family-extra-bold;
+$card-head-font-family: $font-family-extra-bold;
 
 /*
 * No Data.
 */
 $no-data-font-family: $font-family-extra-bold;
-$no-data-font-size: $font-size-large;
+$no-data-font-size: $font-size-lg;
 $no-data-spaces: $space-base-double 0;
 
 /*
@@ -123,8 +127,12 @@ $tab-head-border: 3px;
 * Sidebar.
 */
 $sidebar-spaces: $space-base;
-
+$sidebar-width: 300px;
 $sidebar-head-height: 60px;
-
 $sidebar-title-font-family: $font-family-extra-bold;
-$sidebar-title-font-size: $font-size-large;
+$sidebar-title-font-size: $font-size-lg;
+
+/*
+* Form.
+*/
+$form-row-spaces: $space-base-half 0;

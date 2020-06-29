@@ -13,7 +13,6 @@ import {
 export class AccountPageComponent {
   accountTabs = accountTabs;
   data = accountTransactionsTabsData;
-  isOpen: boolean = true;
 
   /**
    * Choice tab and filter data
@@ -26,9 +25,5 @@ export class AccountPageComponent {
     if (tabName === 'bank statements') {
       this.data = accountStatementsTabsData;
     }
-  }
-
-  toggleFilter() {
-    this.isOpen = !this.isOpen;
   }
 }

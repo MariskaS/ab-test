@@ -1,17 +1,9 @@
 <app-tabs [tabs]="accountTabs"
           (selectedTab)="selectTab($event)">
   <ng-container tab-toolbar>
-    <ul>
-      <li class="ab-full ab-tab__title">
+    <ul class="ab-toolbar--tabs">
+      <li class="ab-full">
         <h3>BOA Interest Free Checking:&nbsp;&nbsp;*&nbsp;7548</h3>
-        <button app-button
-                theme="buttonIcon"
-                aria-label="To toggle a filter block"
-                title="To toggle a filter block"
-                (click)="toggleFilter()"
-                type="button"
-                [class.isActive]="isOpen"
-                iconName="filter"></button>
       </li>
       <li>
         <button app-button
@@ -46,19 +38,3 @@
 
   </ng-container>
 </app-tabs>
-
-<app-sidebar *ngIf="isOpen"
-             sidebarTitle="Filter">
-  <ng-container sidebar-body>
-    <form>
-      <app-search></app-search>
-
-      <app-dropdown [list]="data.tableActions"
-                    dropdownTitle="Actions"></app-dropdown>
-
-      <app-dropdown [list]="data.tableFilter"
-                    dropdownTitle="Filter"></app-dropdown>
-
-    </form>
-  </ng-container>
-</app-sidebar>

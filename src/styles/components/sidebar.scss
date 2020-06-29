@@ -16,6 +16,7 @@
   overflow: hidden;
   background-color: var(--sidebar-bg);
   border-left: 1px solid var(--sidebar-border);
+  min-width: $sidebar-width;
 
   &__head,
   &__body {

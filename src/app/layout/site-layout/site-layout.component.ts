@@ -14,11 +14,6 @@ export class SiteLayoutComponent {
     return this.localStorageService.get('ab-navbar:theme') || THEME.dark;
   }
 
-  links = [
-    {url: '/account', name: 'Account'},
-    {url: '/profile', name: 'Profile'},
-  ];
-
   constructor(private localStorageService: LocalStorageService) {
   }
 }

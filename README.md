@@ -4,7 +4,9 @@ Task - Implement the interface using HTML/CSS and Angular.
 ## Description  
 **[Live Demo](http://mariskas.github.io/)** - here is a build version of the test task. 
 
-**Technologies:** [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0, HTML/Scss, Typescript, HTML/Scss, JavaScript.  
+**Technologies:** 
+[Angular CLI](https://github.com/angular/angular-cli) version 10.0.0, HTML/Scss, 
+Typescript, HTML/Scss, NgRx, JavaScript.  
 
 **Tools:** Webstorm, Git, GitHub.
 
@@ -12,6 +14,10 @@ Task - Implement the interface using HTML/CSS and Angular.
 
 ## Comments
 1. LocalStorage Service (used to save the selected color scheme(`dark`|| `light` mode) of the project).
+1. Added routing.
+ - In the case of a **path that does not exist**, **the Page Not Found**
+  will be displayed.
+ - In the case of an empty path - `redirectTo: '/account'`.
 1. Reusable components such as Buttons and Dropdown.
 1. Responsive for all components. 
 1. Variable system(Css/Scss) - The color variables are made in **CSS** for the ability to quickly change the 

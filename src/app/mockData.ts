@@ -1,4 +1,9 @@
-import {TabsData, TabsItem} from './interfaces';
+import {MainNavigationItem, TabsData, TabsItem} from './interfaces';
+
+export const mainNavigationList: MainNavigationItem[] = [
+  {url: '/account', name: 'Account'},
+  {url: '/profile', name: 'Profile'},
+]
 
 export const accountTabs: TabsItem[] = [
   {
