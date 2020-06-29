@@ -60,7 +60,7 @@ $transition-base: 270ms ease-in-out;
 /*
 * Navbar.
 */
-$navbar-spaces: 0 $space-base;
+$navbar-spaces: $space-base;
 $navbar-font-size: $font-size-lg;
 
 $navbar-link-height: $control-height;
