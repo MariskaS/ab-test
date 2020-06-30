@@ -4,4 +4,8 @@
   background-color: transparent;
   padding: 0;
   @include btn-icon-variant;
+
+  svg {
+    color: var(--color-primary);
+  }
 }

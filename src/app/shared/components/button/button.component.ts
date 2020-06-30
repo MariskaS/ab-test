@@ -1,7 +1,7 @@
 import {Component, HostBinding, Input} from '@angular/core';
 
 @Component({
-  selector: 'button[app-button]',
+  selector: '[app-button]',
   template: `
     <svg-icon class="ab-btn__ico"
               *ngIf="iconName"
