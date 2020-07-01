@@ -30,6 +30,7 @@ import {ProfilePageComponent} from './pages/profile-page/profile-page.component'
 import {NotFoundPageComponent} from './pages/not-found-page/not-found-page.component';
 
 import {SiteLayoutComponent} from './layout/site-layout/site-layout.component';
+import { PopupComponent } from './shared/components/popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import {SiteLayoutComponent} from './layout/site-layout/site-layout.component';
     SidebarComponent,
     ProfilePageComponent,
     NotFoundPageComponent,
-    SiteLayoutComponent
+    SiteLayoutComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,

@@ -26,6 +26,7 @@
 
       // For correct :focus on the tab.
       &:focus {
+        position: relative;
         z-index: 1;
       }
     }

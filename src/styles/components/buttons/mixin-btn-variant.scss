@@ -45,13 +45,14 @@
     margin-right: $btn-icon-space;
   }
 
-  // For Desktop & Tablet.
-  @media (min-width: $screen-sx) {
-    min-width: $btn-width;
-  }
-
-  // For Small Devices.
+  // For Small Devices (hide text).
   @media (max-width: $screen-sx) {
-    width: 100%;
+    .ab-btn__ico {
+      margin: 0;
+    }
+
+    span {
+      display: none;
+    }
   }
 }
